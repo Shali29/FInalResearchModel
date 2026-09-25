@@ -1,0 +1,18 @@
+version: 1
+reason: Researcher-confirmed corrections after Label Studio boundary review
+annotator_1:
+  drop_spans:
+    annotation-a79c5ceeef0d:
+      - [1557, 1568, TEMPORAL_ENTITY]
+  replace_spans:
+    annotation-3a7db66573a7:
+      remove:
+        - [606, 608, PENALTY]
+        - [607, 614, PENALTY]
+      add:
+        - [606, 614, PENALTY]
+annotator_2:
+  drop_spans:
+    annotation-9526d7eacb0a:
+      - [469, 474, PENALTY]
+targeted_gap: {}

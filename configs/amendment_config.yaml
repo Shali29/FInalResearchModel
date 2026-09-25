@@ -1,0 +1,27 @@
+project:
+  random_seed: 2026
+
+operations:
+  - insertion
+  - deletion
+  - substitution
+  - repeal
+  - renumbering
+
+method:
+  primary: deterministic_reference_parsing_and_versioned_diff
+  machine_learning_requires_verified_labels: true
+  chronological_application: true
+  unresolved_instructions_require_manual_review: true
+  infer_cross_document_relationships: false
+
+evaluation:
+  require_manually_verified_gold_records: true
+  metrics:
+    - reference_precision_recall_f1
+    - operation_accuracy_and_macro_f1
+    - affected_provision_linking_accuracy
+    - reconstructed_text_reviewed_correctness
+    - completeness
+    - unresolved_case_rate
+  target_over_90_percent_metric: pending_precise_definition

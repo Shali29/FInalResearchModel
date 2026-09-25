@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+
+# Editors and operating systems
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and local overrides
+.env
+configs/*_local.yaml
+
+# Raw/legal documents and generated datasets
+data/raw/**/*
+!data/raw/**/.gitkeep
+data/extracted/**/*
+!data/extracted/.gitkeep
+data/aligned/**/*
+!data/aligned/.gitkeep
+data/annotation/**/*
+!data/annotation/.gitkeep
+data/processed/**/*
+!data/processed/.gitkeep
+data/splits/**/*
+!data/splits/.gitkeep
+
+# Large experiment outputs
+models/**/*
+!models/.gitkeep
+results/ner/**/*
+!results/ner/.gitkeep
+results/simplification/**/*
+!results/simplification/.gitkeep
+results/amendments/**/*
+!results/amendments/.gitkeep
+results/figures/**/*
+!results/figures/.gitkeep
+
+# Local logs and temporary files
+*.log
+tmp/
+.phase*_tmp/
+
+# Downloaded OCR models (checksums and instructions remain tracked)
+resources/tessdata/*.traineddata

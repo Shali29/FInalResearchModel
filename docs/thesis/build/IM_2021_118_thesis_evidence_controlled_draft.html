@@ -1,0 +1,1117 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@page { size: A4; margin: 25mm 22mm 25mm 30mm;
+  @bottom-center { content: counter(page); font-size: 9pt; color: #555; } }
+@page:first { @bottom-center { content: none; } }
+body { font-family: "Times New Roman", "Nirmala UI", serif; font-size: 11.5pt;
+  line-height: 1.55; color: #111; text-align: justify; }
+h1 { font-size: 18pt; text-transform: uppercase; text-align: center; page-break-before: always;
+  margin-top: 0; margin-bottom: 18pt; }
+h1:first-of-type { page-break-before: avoid; }
+h2 { font-size: 15pt; margin-top: 18pt; color: #111; }
+h3 { font-size: 12.5pt; margin-top: 14pt; }
+p { margin: 0 0 9pt; }
+blockquote { border: 2px solid #a33; padding: 10pt; background: #fff5f5; margin: 12pt 0; }
+table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 0.7pt solid #555; padding: 5pt; vertical-align: top; }
+th { background: #e8edf3; text-align: left; }
+pre { white-space: pre-wrap; font-family: Consolas, "Nirmala UI", monospace; font-size: 8.5pt;
+  background: #f5f5f5; padding: 8pt; }
+code { font-family: Consolas, "Nirmala UI", monospace; font-size: 9pt; }
+.title-page { page-break-after: always; text-align: center; padding-top: 45mm; }
+.title-page h1 { page-break-before: avoid; font-size: 20pt; }
+.title-page p { text-align: center; margin: 16pt 0; }
+.toc { page-break-after: always; }
+a { color: #111; text-decoration: none; }
+</style></head>
+    <body>
+    <div class="title-page">
+      <h1>Legal Document Analysis with Efficient Key Information Extraction</h1>
+      <h2>An NLP-Based Framework for the Sri Lankan Constitution and Penal Code</h2>
+      <p><strong>Shalika Ramanayaka - IM/2021/118</strong></p>
+      <p>Supervisor: Mr. Dinesh Asanka</p>
+      <p>Department of Industrial Management, Faculty of Science<br>
+      University of Kelaniya, Sri Lanka</p><p>2026</p>
+    </div>
+    <blockquote>
+<p><strong>DOCUMENT STATUS — EVIDENCE-CONTROLLED DRAFT (25 September 2026).</strong><br />
+This document is formatted as a thesis, but it is not yet submission-ready. Values marked
+<strong>PENDING — NOT YET MEASURED</strong> require completed human annotation or evaluation. The existing NER
+values are provisional validation results and are not final held-out-test performance. External
+QA benchmark evaluation has been removed from the final scope.</p>
+</blockquote>
+<h2 id="declaration">DECLARATION</h2>
+<p>I hereby state that this research report and findings presented in it are my own and it has not been submitted before nor is it currently being submitted for any other academic programme. Where material has been used from other sources due recognition has been given by mentioning the source.</p>
+<p><strong>Signature of the student</strong></p>
+<p>Signature: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong><strong><em>_</em></strong><strong><em>_</em></strong></p>
+<p><strong>Signature of Supervisor</strong></p>
+<p>Supervisor's Signature: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong><strong><em>_</em></strong><strong><em>_</em></strong></p>
+<hr />
+<h2 id="abstract">ABSTRACT</h2>
+<p>Sri Lankan constitutional and criminal-law documents are publicly available, but specialised
+terminology, long sentence structures, bilingual presentation, scanned sources, and amendment
+history can impede effective access. This research develops a provenance-preserving NLP framework
+for analysing the Constitution of Sri Lanka and the Penal Code in English and Sinhala. The planned
+framework comprises a bilingual annotated corpus, legal named-entity recognition (NER), controlled
+plain-Sinhala explanation, deterministic amendment tracking, and a source-linked prototype. The
+approved entity schema contains <code>FUNDAMENTAL_RIGHT</code>, <code>OFFENSE</code>, <code>PENALTY</code>,
+<code>CONSTITUTIONAL_BODY</code>, and <code>TEMPORAL_ENTITY</code>.</p>
+<p>Twelve supplied legal PDFs comprising 1,062 physical pages were processed. Embedded text was usable
+on 867 pages, OCR output was usable on 188 pages, and seven pages were rejected. Extraction yielded
+2,328 candidate provisions, subsequently segmented into 8,378 blank annotation tasks. A pilot
+corpus currently contains 80 annotated tasks and 297 entity spans. On a 50-task independently
+annotated subset, token-level Cohen's kappa was 0.6466 and exact-span agreement F1 was 0.5304,
+below the planned kappa threshold above 0.80.</p>
+<p>Provisional validation experiments produced exact-span micro/macro F1 of 0.0758/0.0833 for a
+training-derived dictionary and 0.1224/0.0808 for a CRF. The tested mBERT and XLM-R configurations
+obtained exact-span validation F1 of 0.0. Diagnostic outputs showed both majority-class collapse
+and unstable false-positive behaviour. These results do not support the proposed English and
+Sinhala performance targets. Consequently, 420 additional blank tasks were selected for human
+annotation, including 84 tasks for independent double annotation. Final held-out NER evaluation,
+simplification evaluation, amendment evaluation, prototype testing, and user evaluation remain
+pending. The present evidence demonstrates a reproducible corpus-engineering and evaluation
+framework while showing that substantially more high-quality annotated data is required before a
+reliable legal NER model or citizen-facing system can be claimed.</p>
+<p><strong>Keywords:</strong> legal NLP, named-entity recognition, Sinhala, bilingual corpus, statutory text,
+amendment tracking, text simplification, Sri Lanka</p>
+<h2 id="acknowledgements">ACKNOWLEDGEMENTS</h2>
+<p>I sincerely thank everyone who supported me throughout this research. My deepest gratitude goes to my supervisor, Mr. Dinesh Asanka, for his continuous guidance, encouragement, and technical supervision, which were vital to the successful completion of this study. I also extend my appreciation to Dr. Keerthi Wijayasiriwardhane for his coordination and invaluable support. I am thankful to the academic and non-academic staff of the Department of Industrial Management for their assistance. I further wish to express my genuine gratitude to all those who have contributed, regardless of the scale of their involvement, in transforming this research into a reality. Finally, I am deeply grateful to my friends and parents for their encouragement, understanding, and constant motivation, which inspired me to complete this journey successfully.</p>
+<hr />
+<h2 id="table-of-contents">TABLE OF CONTENTS</h2>
+<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#declaration">DECLARATION</a></li>
+<li><a href="#abstract">ABSTRACT</a></li>
+<li><a href="#acknowledgements">ACKNOWLEDGEMENTS</a></li>
+<li><a href="#table-of-contents">TABLE OF CONTENTS</a></li>
+<li><a href="#list-of-tables">LIST OF TABLES</a></li>
+<li><a href="#list-of-figures">LIST OF FIGURES</a></li>
+<li><a href="#list-of-abbreviations">LIST OF ABBREVIATIONS</a></li>
+<li><a href="#chapter-1-introduction">CHAPTER 1: INTRODUCTION</a><ul>
+<li><a href="#11-background">1.1 Background</a></li>
+<li><a href="#12-research-problem">1.2 Research Problem</a></li>
+<li><a href="#13-research-aim">1.3 Research Aim</a></li>
+<li><a href="#14-research-objectives">1.4 Research Objectives</a></li>
+<li><a href="#15-research-questions">1.5 Research Questions</a></li>
+<li><a href="#16-scope">1.6 Scope</a></li>
+<li><a href="#17-contribution">1.7 Contribution</a></li>
+<li><a href="#18-thesis-structure">1.8 Thesis Structure</a></li>
+</ul>
+</li>
+<li><a href="#chapter-2-literature-review">CHAPTER 2: LITERATURE REVIEW</a><ul>
+<li><a href="#21-legal-information-access-in-sri-lanka">2.1 Legal Information Access in Sri Lanka</a></li>
+<li><a href="#22-legal-named-entity-recognition">2.2 Legal Named Entity Recognition</a></li>
+<li><a href="#23-low-resource-and-bilingual-nlp">2.3 Low Resource and Bilingual NLP</a></li>
+<li><a href="#24-legal-text-simplification">2.4 Legal Text Simplification</a></li>
+<li><a href="#25-amendment-extraction-and-consolidation">2.5 Amendment Extraction and Consolidation</a></li>
+<li><a href="#26-research-gap">2.6 Research Gap</a></li>
+<li><a href="#27-conceptual-framework">2.7 Conceptual Framework</a></li>
+</ul>
+</li>
+<li><a href="#chapter-3-research-methodology">CHAPTER 3: RESEARCH METHODOLOGY</a><ul>
+<li><a href="#31-research-design">3.1 Research Design</a></li>
+<li><a href="#32-data-sources-and-provenance">3.2 Data Sources and Provenance</a></li>
+<li><a href="#33-extraction-and-quality-control">3.3 Extraction and Quality Control</a></li>
+<li><a href="#34-bilingual-alignment">3.4 Bilingual Alignment</a></li>
+<li><a href="#35-annotation-schema">3.5 Annotation Schema</a></li>
+<li><a href="#36-corpus-preparation-and-agreement">3.6 Corpus Preparation and Agreement</a></li>
+<li><a href="#37-data-splitting">3.7 Data Splitting</a></li>
+<li><a href="#38-ner-models">3.8 NER Models</a></li>
+<li><a href="#39-text-simplification">3.9 Text Simplification</a></li>
+<li><a href="#310-amendment-tracking">3.10 Amendment Tracking</a></li>
+<li><a href="#311-survey-and-user-needs-assessment">3.11 Survey and User Needs Assessment</a></li>
+<li><a href="#312-ethics">3.12 Ethics</a></li>
+</ul>
+</li>
+<li><a href="#chapter-4-system-development-and-results">CHAPTER 4: SYSTEM DEVELOPMENT AND RESULTS</a><ul>
+<li><a href="#41-implementation-status">4.1 Implementation Status</a></li>
+<li><a href="#42-user-needs-and-usability-evidence">4.2 User Needs and Usability Evidence</a></li>
+<li><a href="#47-corpus-engineering-results">4.7 Corpus Engineering Results</a></li>
+<li><a href="#48-ner-experimental-results">4.8 NER Experimental Results</a></li>
+<li><a href="#49-text-simplification-results">4.9 Text Simplification Results</a></li>
+<li><a href="#410-amendment-tracking-results">4.10 Amendment Tracking Results</a></li>
+<li><a href="#411-integrated-prototype-and-user-evaluation">4.11 Integrated Prototype and User Evaluation</a></li>
+</ul>
+</li>
+<li><a href="#chapter-5-discussion">CHAPTER 5: DISCUSSION</a><ul>
+<li><a href="#51-interpretation-of-the-user-needs-findings">5.1 Interpretation of the User Needs Findings</a></li>
+<li><a href="#52-implications-for-legal-ner">5.2 Implications for Legal NER</a></li>
+<li><a href="#53-implications-for-simplification">5.3 Implications for Simplification</a></li>
+<li><a href="#54-implications-for-amendment-tracking">5.4 Implications for Amendment Tracking</a></li>
+<li><a href="#55-methodological-strengths">5.5 Methodological Strengths</a></li>
+<li><a href="#56-limitations">5.6 Limitations</a></li>
+<li><a href="#57-threats-to-validity">5.7 Threats to Validity</a></li>
+</ul>
+</li>
+<li><a href="#chapter-6-conclusion-and-future-work">CHAPTER 6: CONCLUSION AND FUTURE WORK</a><ul>
+<li><a href="#61-conclusion">6.1 Conclusion</a></li>
+<li><a href="#62-recommendations-for-completing-the-research">6.2 Recommendations for Completing the Research</a></li>
+<li><a href="#63-future-work">6.3 Future Work</a></li>
+</ul>
+</li>
+<li><a href="#references">REFERENCES</a></li>
+<li><a href="#appendices">APPENDICES</a><ul>
+<li><a href="#appendix-a-survey-analysis-notes">Appendix A: Survey Analysis Notes</a></li>
+<li><a href="#appendix-b-data-insertion-checklist">Appendix B: Data Insertion Checklist</a></li>
+<li><a href="#appendix-c-reproducibility-record">Appendix C: Reproducibility Record</a></li>
+</ul>
+</li>
+<li><a href="#appendix-d-evaluation-formulas-and-result-insertion-rules">APPENDIX D: EVALUATION FORMULAS AND RESULT INSERTION RULES</a><ul>
+<li><a href="#d1-classification-and-ner">D.1 Classification and NER</a></li>
+<li><a href="#d2-annotation-agreement">D.2 Annotation agreement</a></li>
+<li><a href="#d3-simplification-amendment-and-usability">D.3 Simplification, amendment, and usability</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="list-of-tables">LIST OF TABLES</h2>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Title</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table 1</td>
+<td>Research objectives and outputs</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Table 2</td>
+<td>Summary of the research gap</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Table 3</td>
+<td>Approved entity annotation schema</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Table 4</td>
+<td>Research phases and current evidence</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Table 5</td>
+<td>Survey respondent profile</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Table 6</td>
+<td>Citizen knowledge confidence and cost concerns</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Table 7</td>
+<td>Expected usefulness of system features</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Table 8</td>
+<td>Corpus engineering outputs</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Table 9</td>
+<td>NER model comparison</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Table 10</td>
+<td>Text simplification evaluation</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Table 11</td>
+<td>Amendment tracking evaluation</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Table 12</td>
+<td>Integrated prototype evaluation</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Table 13</td>
+<td>Threats to validity and controls</td>
+<td>31</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="list-of-figures">LIST OF FIGURES</h2>
+<table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Title</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Figure 1</td>
+<td>Proposed system architecture</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Figure 2</td>
+<td>Survey respondents by role</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Figure 3</td>
+<td>Reported legal information difficulties</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Figure 4</td>
+<td>Expected usefulness of system features</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Figure 5</td>
+<td>Evidence required before reliance</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="list-of-abbreviations">LIST OF ABBREVIATIONS</h2>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API</td>
+<td>Application Programming Interface</td>
+</tr>
+<tr>
+<td>BIO</td>
+<td>Beginning Inside Outside tagging scheme</td>
+</tr>
+<tr>
+<td>CRF</td>
+<td>Conditional Random Field</td>
+</tr>
+<tr>
+<td>DDR</td>
+<td>Design and Development Research</td>
+</tr>
+<tr>
+<td>IAA</td>
+<td>Inter-annotator agreement</td>
+</tr>
+<tr>
+<td>NER</td>
+<td>Named Entity Recognition</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>Natural Language Processing</td>
+</tr>
+<tr>
+<td>OCR</td>
+<td>Optical Character Recognition</td>
+</tr>
+<tr>
+<td>XLM-R</td>
+<td>XLM-RoBERTa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chapter-1-introduction">CHAPTER 1: INTRODUCTION</h2>
+<h3 id="11-background">1.1 Background</h3>
+<p>The Constitution of Sri Lanka defines the structure of government, the powers of public institutions, and the fundamental rights of citizens. The Penal Code defines criminal offences and punishments. Although these texts are central to civic and professional life, direct access to a PDF does not guarantee meaningful access to the law. Readers must locate the correct provision, interpret specialised language, determine whether the text has been amended, and often move between English and Sinhala versions.</p>
+<p>Natural language processing offers methods for recognising legally significant phrases, structuring provisions, simplifying difficult language, and representing changes between statutory versions. Legal NLP models, however, depend on domain-specific data. English models cannot be assumed to perform reliably on Sinhala legal text, and a model trained on case law may not transfer directly to constitutional provisions or criminal statutes. This research therefore begins with corpus construction and human annotation before model training.</p>
+<h3 id="12-research-problem">1.2 Research Problem</h3>
+<p>Sri Lankan citizens, students, and legal practitioners face three connected problems. First, important concepts such as fundamental rights, offences, penalties, constitutional bodies, and legal time expressions are embedded in lengthy provisions. Second, legal wording is difficult for non-specialists to understand, particularly when a reader prefers Sinhala. Third, consolidated statutes and separate amendment instruments make it difficult to establish how a provision changed and which wording is current.</p>
+<p>Existing search and question-answering tools do not by themselves solve these problems. Search results may retrieve a provision without identifying its key entities, explaining the wording, or showing its amendment history. The research problem is therefore the absence of an evaluated bilingual framework that joins key-information extraction, plain-language explanation, and amendment tracking for the Sri Lankan Constitution and Penal Code.</p>
+<h3 id="13-research-aim">1.3 Research Aim</h3>
+<p>The aim is to develop and evaluate an NLP-based framework that improves access to the Sri Lankan Constitution and Penal Code by extracting key legal information in English and Sinhala, producing legally controlled plain-Sinhala explanations, and tracing amendments to affected provisions.</p>
+<h3 id="14-research-objectives">1.4 Research Objectives</h3>
+<p><strong>Table 1: Research objectives and outputs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Objective</th>
+<th>Research Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Develop a bilingual annotated corpus</td>
+<td>Structured English and Sinhala provisions with human-verified entity spans and provenance</td>
+</tr>
+<tr>
+<td>Implement and evaluate legal NER</td>
+<td>Comparative results for rule-based, CRF, multilingual transformer, and English legal-domain models</td>
+</tr>
+<tr>
+<td>Develop amendment tracking</td>
+<td>Versioned links between amendment instructions and affected provisions with side-by-side changes</td>
+</tr>
+<tr>
+<td>Implement text simplification</td>
+<td>Plain Sinhala explanations that preserve legal meaning, citations, exceptions, and penalties</td>
+</tr>
+<tr>
+<td>Evaluate usefulness and usability</td>
+<td>Survey findings, expert review, comprehension testing, and prototype usability evidence</td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-research-questions">1.5 Research Questions</h3>
+<ol>
+<li>
+<p>How effectively can NLP models identify fundamental rights, offences, penalties, constitutional bodies, and temporal entities in English and Sinhala constitutional and criminal-law text?</p>
+</li>
+<li>
+<p>How can complex legal wording be explained in plain Sinhala while retaining the meaning of rights, duties, prohibitions, exceptions, conditions, penalties, and citations?</p>
+</li>
+<li>
+<p>How accurately can amendment instructions be linked to affected provisions and represented as a chronological version history?</p>
+</li>
+<li>
+<p>How do citizens, law students, and lawyers assess their current access difficulties and the expected usefulness of the proposed system features?</p>
+</li>
+</ol>
+<h3 id="16-scope">1.6 Scope</h3>
+<p>The study covers the Constitution of Sri Lanka, consolidated through the Twenty Second Amendment in the collected source, and the Penal Code with the amendment documents available to the researcher. The primary languages are English and Sinhala. Tamil language support is excluded due to scope constraints. The system provides legal information, not legal advice.</p>
+<h3 id="17-contribution">1.7 Contribution</h3>
+<p>The principal contribution is a reproducible workflow for a low-resource bilingual legal domain. The work combines source provenance, OCR review, provision segmentation, annotation, leakage-controlled model evaluation, plain-language safeguards, and amendment versioning. The survey adds user evidence that informs feature priorities and trust requirements. The outputs can support later Sri Lankan legal NLP research without presenting automatically generated explanations as authoritative law.</p>
+<h3 id="18-thesis-structure">1.8 Thesis Structure</h3>
+<p>Chapter 2 reviews legal NLP, multilingual NER, simplification, amendment extraction, and Sri Lankan research. Chapter 3 presents the research design, data, annotation process, models, and evaluation measures. Chapter 4 documents implementation and available results, including the survey analysis and fields for unfinished experiments. Chapter 5 interprets the findings and limitations. Chapter 6 concludes the research and identifies the work required for final validation and future extension.</p>
+<hr />
+<h2 id="chapter-2-literature-review">CHAPTER 2: LITERATURE REVIEW</h2>
+<h3 id="21-legal-information-access-in-sri-lanka">2.1 Legal Information Access in Sri Lanka</h3>
+<p>Legal accessibility has linguistic, technical, and interpretive dimensions. A document may be publicly downloadable yet remain inaccessible when it is scanned, inconsistently encoded, difficult to search, or written in specialised language. For bilingual statutory analysis, accessibility also depends on whether parallel provisions can be located reliably and whether discrepancies introduced through OCR or version differences are visible to the user.</p>
+<p>Sri Lankan legal NLP research has demonstrated the feasibility of information retrieval, entity extraction, and legal question answering. Prior work has focused mainly on court decisions, constitutional search, or broad document collections. The present research differs by concentrating on the Constitution and Penal Code as linked sources of rights, state institutions, offences, penalties, and amendment histories.</p>
+<h3 id="22-legal-named-entity-recognition">2.2 Legal Named Entity Recognition</h3>
+<p>Named entity recognition converts unstructured text into spans assigned to predefined categories. Traditional CRF models use lexical, orthographic, and contextual features. Neural sequence models learn representations from data, while transformer models use contextual pre-training and subword tokenisation. Surveys of legal NER report that domain-specific and transformer-based models generally outperform general baselines when sufficient annotated data is available (Leitner et al., 2021; Premasiri et al., 2025).</p>
+<p>LEGAL-BERT demonstrates the value of legal-domain pre-training for English tasks (Chalkidis et al., 2020). It is not a bilingual Sinhala model. Multilingual BERT and XLM-RoBERTa are therefore more appropriate candidates for cross-language experiments, while English Legal-BERT provides an English-only comparator. Performance must be reported separately by language and document type because an overall micro-F1 score can conceal weak performance on Sinhala or rare entity classes.</p>
+<h3 id="23-low-resource-and-bilingual-nlp">2.3 Low Resource and Bilingual NLP</h3>
+<p>Sinhala legal text presents low-resource challenges, including limited annotated corpora, OCR errors, script-specific tokenisation, and variation between formal legal usage and ordinary language. The development of a bilingual annotated corpus is therefore a foundational contribution of this research, not merely a preparatory step.</p>
+<h3 id="24-legal-text-simplification">2.4 Legal Text Simplification</h3>
+<p>Text simplification seeks to reduce lexical and syntactic difficulty while preserving meaning. In law, a fluent explanation can still be unsafe if it omits a condition, changes a prohibition, weakens an obligation, or removes an exception. Alva-Manchego et al. (2020) distinguish simplification from summarisation and translation. Dale (2021) emphasises the difficulty of simplifying legal text without losing precision. The present framework therefore separates faithful translation from simplification and retains the source provision beside every explanation.</p>
+<h3 id="25-amendment-extraction-and-consolidation">2.5 Amendment Extraction and Consolidation</h3>
+<p>Amendment instruments express operations such as insertion, deletion, substitution, repeal, and renumbering. Smywinski-Pohl et al. (2021) show that amendment information can be extracted from statutory text. Automatic consolidation remains risky because a reference may be ambiguous, an amendment may depend on another instrument, and OCR errors can change section numbers or years. The proposed system uses deterministic reference parsing and versioned comparison as the first baseline. Ambiguous cases require manual review.</p>
+<h3 id="26-research-gap">2.6 Research Gap</h3>
+<p><strong>Table 2: Summary of the research gap</strong></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Established Work</th>
+<th>Gap Addressed by This Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legal NER</td>
+<td>Entity extraction from legal and court documents</td>
+<td>Bilingual entity extraction for Sri Lankan constitutional and Penal Code provisions</td>
+</tr>
+<tr>
+<td>Sinhala NLP</td>
+<td>Growing multilingual resources and general Sinhala processing</td>
+<td>Human-annotated statutory entities with explicit provenance and OCR review</td>
+</tr>
+<tr>
+<td>Simplification</td>
+<td>General and legal-domain simplification methods</td>
+<td>Plain Sinhala explanation with legal preservation checks and source text display</td>
+</tr>
+<tr>
+<td>Amendments</td>
+<td>Extraction and consolidation methods in other jurisdictions</td>
+<td>Version tracking for collected Sri Lankan constitutional and Penal Code materials</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Model-level accuracy and retrieval</td>
+<td>Combined technical, expert, citizen, and usability evaluation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="27-conceptual-framework">2.7 Conceptual Framework</h3>
+<p>The conceptual framework links document type, language, annotation quality, and model choice to extraction performance. Extracted entities support the simplification and amendment components by identifying the legal concepts that must be preserved. User type and task shape perceived usefulness, comprehension, and trust. The framework therefore treats model accuracy as necessary but insufficient: the system must also preserve source references and communicate uncertainty.</p>
+<hr />
+<h2 id="chapter-3-research-methodology">CHAPTER 3: RESEARCH METHODOLOGY</h2>
+<h3 id="31-research-design">3.1 Research Design</h3>
+<p>The study uses a design-science and development-research approach. The artefacts are the bilingual corpus, NER models, simplification module, amendment tracker, and integrated prototype. Development proceeds iteratively through problem definition, source audit, data preparation, annotation, modelling, evaluation, and refinement. Quantitative measures assess model performance and survey responses. Qualitative review assesses legal accuracy, annotation disagreements, simplification errors, and user feedback.</p>
+<p><strong>Figure 1: Proposed system architecture</strong></p>
+<pre><code>[Authoritative PDFs English and Sinhala] → [Extraction and provision structuring] → [Bilingual corpus and manual annotation] → [Legal NER training and evaluation]
+                                                                                              ↓
+                                                                         [Text simplification with legal safeguards]
+                                                                                              ↓
+                                                                         [Amendment tracking and version comparison]
+                                                                                              ↓
+                                                                         [Integrated citizen-facing legal document analysis framework]
+</code></pre>
+<h3 id="32-data-sources-and-provenance">3.2 Data Sources and Provenance</h3>
+<p>The source audit identified 12 legal PDFs containing English and Sinhala Constitution and Penal Code materials, including overlapping consolidated documents and collected amendment Acts. The collection contained approximately 1,062 physical PDF pages. The Constitution sources included consolidated wording through the Twenty Second Amendment, but the collection did not contain all 22 amendments as separate Acts. The English Penal Code amendment material included five Acts in the collected volume, while seven separate Sinhala Penal Code amendment PDFs were identified.</p>
+<h3 id="33-extraction-and-quality-control">3.3 Extraction and Quality Control</h3>
+<p>Embedded text is extracted where available. OCR is applied when the source is scanned or the embedded text is unusable. Sinhala OCR receives special review because digit substitutions and legacy-font problems can change legal meaning. Confirmed examples during development included section identifiers misread as different numbers and the year 2002 being rendered incorrectly. Review therefore prioritises Act numbers, years, provision numbers, subsection markers, dates, monetary amounts, imprisonment periods, negation, conditions, and quotation boundaries.</p>
+<h3 id="34-bilingual-alignment">3.4 Bilingual Alignment</h3>
+<p>English and Sinhala provisions are aligned primarily by document type, provision type, provision number, and subsection structure. Page numbers are not used as evidence of correspondence. The automated baseline produced 160 provisional pairs, comprising five Constitution pairs and 155 Penal Code pairs. It also recorded 468 unmatched structural references and 206 duplicated or ambiguous references. Because manual review was deferred, these pairs remain provisional and are not used as verified bilingual accuracy evidence.</p>
+<h3 id="35-annotation-schema">3.5 Annotation Schema</h3>
+<p><strong>Table 3: Approved five-class entity annotation schema</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Operational Definition</th>
+<th>Illustrative Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FUNDAMENTAL_RIGHT</td>
+<td>A right expressly declared or recognised as a fundamental right in the selected constitutional context</td>
+<td>freedom of speech and expression</td>
+</tr>
+<tr>
+<td>OFFENSE</td>
+<td>A named criminal offence or conduct explicitly designated as an offence</td>
+<td>murder</td>
+</tr>
+<tr>
+<td>PENALTY</td>
+<td>The complete punishment expression, including imprisonment, fine, or another legal consequence</td>
+<td>fine not exceeding one hundred thousand rupees</td>
+</tr>
+<tr>
+<td>CONSTITUTIONAL_BODY</td>
+<td>A formally named body or institution created or recognised by the Constitution</td>
+<td>Public Service Commission</td>
+</tr>
+<tr>
+<td>TEMPORAL_ENTITY</td>
+<td>A date, deadline, duration, or legally significant time expression not absorbed into a penalty span</td>
+<td>within fourteen days</td>
+</tr>
+</tbody>
+</table>
+<p>Article and Section references remain structural metadata rather than a sixth entity class. Overlapping entities are not allowed in the approved schema. Tasks with no target entity are retained as negative examples. Two annotators independently label a shared subset. Disagreements are adjudicated before the gold corpus is produced.</p>
+<h3 id="36-corpus-preparation-and-agreement">3.6 Corpus Preparation and Agreement</h3>
+<p>The software generated 8,378 blank tasks in the complete candidate pool and a balanced 500-task pilot. An initial annotation export contained 145 completed tasks, but only one entity was marked, showing that the random sample was too sparse for training. The process was corrected by producing an entity-enriched pilot without automatically generating labels. A later expansion batch contained 420 independent parent provisions, including 220 English and 200 Sinhala tasks, with 84 reserved for independent double annotation. This correction is methodologically important because it improves entity coverage without converting keyword cues into gold labels.</p>
+<p>Inter-annotator agreement is calculated on the shared subset using exact-span entity F1 and token-level Cohen kappa. Kappa is retained because it appears in the approved methodology, but exact-span agreement is more directly relevant to NER. All disputed items must receive a documented adjudication decision before gold-corpus creation.</p>
+<h3 id="37-data-splitting">3.7 Data Splitting</h3>
+<p>The gold corpus is divided using grouped splitting at the parent-provision level. Sentences from the same Article or Section cannot appear across training, validation, and test sets. An untouched test set is reserved for final reporting. Five-fold cross-validation is performed on the development portion only if each fold contains defensible representation of the rare classes. Otherwise, the number of folds is reduced and the reason is reported.</p>
+<h3 id="38-ner-models">3.8 NER Models</h3>
+<p>The NER experiments compare a dictionary or rule baseline, a CRF baseline, multilingual BERT, XLM-RoBERTa base, and an English Legal-BERT checkpoint on English data. Token labels are aligned to subwords, padding tokens are masked, random seeds are fixed, and the best checkpoint is selected using validation macro-F1. The held-out test set is evaluated once after model selection.</p>
+<p>Primary metrics are exact-match entity-level precision, recall, and F1. Results are also reported by class, language, and document type. Micro-F1 measures performance across all spans, while macro-F1 gives equal weight to each entity class.</p>
+<h3 id="39-text-simplification">3.9 Text Simplification</h3>
+<p>The simplification component uses a controlled hybrid baseline unless a verified parallel corpus of complex legal text and plain Sinhala explanations becomes available. The workflow preserves the original provision, produces or verifies a faithful Sinhala translation, applies glossary and structural simplification rules, and checks entities, citations, negation, conditions, duties, prohibitions, exceptions, and penalties. A legal reviewer rates accuracy, and citizen participants answer comprehension questions based on the original and simplified versions.</p>
+<h3 id="310-amendment-tracking">3.10 Amendment Tracking</h3>
+<p>The amendment module extracts affected provision references and operation types. Each event stores the amendment identifier, effective date where available, source file, affected provision, original text, instruction, updated text, and verification status. Operations are applied chronologically to produce a version history. The evaluation uses a manually verified set of amendment instructions and reports reference-detection F1, operation-classification macro-F1, linking accuracy, reconstructed-text correctness, completeness, and unresolved-case rate.</p>
+<h3 id="311-survey-and-user-needs-assessment">3.11 Survey and User Needs Assessment</h3>
+<p>The cross-sectional survey collected 31 valid adult responses. Routing presented a common section followed by role-specific questions for citizens, law students, and lawyers. Feature-usefulness, likelihood, and scenario-value items used ordered response scales. Multiple-response questions were analysed as counts and percentages of respondents, so their percentages can total more than 100 percent. The analysis is descriptive because convenience sampling and small subgroup sizes, particularly the lawyer group, do not support population-level inference.</p>
+<h3 id="312-ethics">3.12 Ethics</h3>
+<p>All legal documents are public sources. Original text is attributed and preserved. Survey participation was voluntary, and every included respondent confirmed consent and an age of at least 18 years. The system must display a legal-information disclaimer, link generated outputs to source provisions, identify unverified content, and avoid claims that it replaces a lawyer or gives legal advice.</p>
+<hr />
+<h2 id="chapter-4-system-development-and-results">CHAPTER 4: SYSTEM DEVELOPMENT AND RESULTS</h2>
+<h3 id="41-implementation-status">4.1 Implementation Status</h3>
+<p><strong>Table 4: Research phases and current evidence</strong></p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Output or Evidence</th>
+<th>Status at This Preparation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 Source audit</td>
+<td>Scope, inconsistencies, assumptions, source inventory</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>1 Project setup</td>
+<td>Python 3.11 environment, modular package, tests, configurations</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>2 Extraction</td>
+<td>Structured records, OCR, quality ledger, provenance</td>
+<td>Automated extraction completed; verified corrections must remain traceable</td>
+</tr>
+<tr>
+<td>3 Alignment</td>
+<td>160 provisional pairs and issue reports</td>
+<td>Implementation completed; gold review deferred</td>
+</tr>
+<tr>
+<td>4 Annotation</td>
+<td>Guidelines, Label Studio tasks, agreement and adjudication code</td>
+<td>Implemented; manual gold-corpus completion is required</td>
+</tr>
+<tr>
+<td>5 Splitting</td>
+<td>Grouped leakage-controlled train/validation/test procedure</td>
+<td>To be finalised from adjudicated gold corpus</td>
+</tr>
+<tr>
+<td>6 NER modelling</td>
+<td>Baselines and transformer comparison</td>
+<td>In progress</td>
+</tr>
+<tr>
+<td>7–9</td>
+<td>Simplification, amendment tracking, and integration</td>
+<td>Planned and specified; final outputs pending</td>
+</tr>
+</tbody>
+</table>
+<p>The implementation follows a modular Python package structure with separate components for data extraction, annotation, NER, simplification, amendment handling, evaluation, and the application layer. Configuration files record data paths and experiment settings. Automated tests are used to protect record schemas, Unicode handling, task identifiers, and annotation conversion.</p>
+<h3 id="42-user-needs-and-usability-evidence">4.2 User Needs and Usability Evidence</h3>
+<p><strong>PENDING — NOT YET VERIFIED.</strong> The working manuscript contained numerical claims for a
+31-participant survey, but the anonymised raw questionnaire export and analysis script were not
+available in the research repository when this draft was generated. Those claims are therefore
+excluded. If the study was conducted with appropriate consent, the raw anonymised data must be
+supplied, quality checked, and recalculated before respondent profiles, percentages, charts, or
+conclusions are inserted.</p>
+<p>Required reporting will include recruitment and consent procedures, exact subgroup sizes, missing
+data rules, descriptive distributions, task definitions, and the limitations of convenience
+sampling. No inferential population claim will be made from a small non-probability sample.</p>
+<h3 id="47-corpus-engineering-results">4.7 Corpus Engineering Results</h3>
+<p><strong>Table 8: Corpus engineering outputs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Observed Result</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legal source PDFs</td>
+<td>12</td>
+<td>Includes overlapping consolidated documents and amendment materials</td>
+</tr>
+<tr>
+<td>Approximate physical pages</td>
+<td>1,062</td>
+<td>Page count is not equal to unique legal content</td>
+</tr>
+<tr>
+<td>Complete blank candidate tasks</td>
+<td>8,378</td>
+<td>Candidate pool, not an annotated corpus</td>
+</tr>
+<tr>
+<td>Provisional bilingual pairs</td>
+<td>160</td>
+<td>Manual verification deferred; not bilingual gold data</td>
+</tr>
+<tr>
+<td>Unmatched structural references</td>
+<td>468</td>
+<td>Require parser improvement or manual resolution</td>
+</tr>
+<tr>
+<td>Duplicated or ambiguous references</td>
+<td>206</td>
+<td>Excluded from automatic gold alignment</td>
+</tr>
+<tr>
+<td>Expansion annotation tasks</td>
+<td>420</td>
+<td>220 English and 200 Sinhala independent provisions</td>
+</tr>
+<tr>
+<td>Shared expansion tasks</td>
+<td>84</td>
+<td>Reserved for independent double annotation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="48-ner-experimental-results">4.8 NER Experimental Results</h3>
+<p>The following values are observed <strong>provisional validation results</strong>, not five-fold or final
+held-out-test results. The training set contained 56 tasks, validation contained 12 tasks, and the
+untouched test set contained 12 tasks. No parent-record overlap was detected among these sets.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align: right;">Exact-span micro-F1</th>
+<th style="text-align: right;">Exact-span macro-F1</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training-derived dictionary</td>
+<td style="text-align: right;">0.0758</td>
+<td style="text-align: right;">0.0833</td>
+<td>Highest provisional macro-F1</td>
+</tr>
+<tr>
+<td>CRF</td>
+<td style="text-align: right;">0.1224</td>
+<td style="text-align: right;">0.0808</td>
+<td>Highest provisional micro-F1</td>
+</tr>
+<tr>
+<td>mBERT, unweighted</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td>No entity spans predicted</td>
+</tr>
+<tr>
+<td>mBERT, strong inverse-frequency weighting</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td>441 false-positive spans; 37 false negatives</td>
+</tr>
+<tr>
+<td>XLM-R, moderate square-root weighting</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td>4 false-positive <code>OFFENSE</code> spans; 37 false negatives</td>
+</tr>
+</tbody>
+</table>
+<p>For exact entity spans,</p>
+<p>[
+P=rac{TP}{TP+FP},\qquad
+R=rac{TP}{TP+FN},\qquad
+F_1=rac{2TP}{2TP+FP+FN}.
+]</p>
+<p>The dictionary result gives the highest macro-F1, while the CRF gives the highest micro-F1. Both
+scores are too low to support deployment. Transformer training loss decreased, but no predicted
+span exactly matched a validation entity. Strong weighting overcorrected majority-class collapse
+and generated excessive <code>PENALTY</code> false positives. These findings indicate insufficient and
+unstable supervision in the provisional corpus rather than achievement of the planned targets.</p>
+<p>The English F1 &gt; 85% and Sinhala F1 &gt; 75% targets were <strong>not achieved</strong>. Further tuning on the same
+12 validation tasks was stopped to limit validation overfitting. Final model comparison, per-class
+confidence intervals, five-fold mean/standard deviation, English-only Legal-BERT, and final test
+evaluation remain <strong>PENDING — NOT YET MEASURED</strong> until the expanded annotations are independently
+reviewed and adjudicated.</p>
+<h3 id="49-text-simplification-results">4.9 Text Simplification Results</h3>
+<p><strong>Table 10: Text simplification evaluation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Evaluation Dimension</th>
+<th>Measure</th>
+<th>Final Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Readability</td>
+<td>Validated Sinhala readability or controlled proxy</td>
+<td>[VALUE AND METHOD]</td>
+</tr>
+<tr>
+<td>Comprehension</td>
+<td>Correct answers before and after simplification</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Legal accuracy</td>
+<td>Mean expert rating and agreement</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Entity preservation</td>
+<td>Entities retained exactly</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Citation preservation</td>
+<td>Article and Section references retained</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Meaning failures</td>
+<td>Negation, condition, exception, duty, penalty, hallucination</td>
+<td>[COUNTS BY TYPE]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="410-amendment-tracking-results">4.10 Amendment Tracking Results</h3>
+<p><strong>Table 11: Amendment tracking evaluation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+<th>Final Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference detection F1</td>
+<td>Exact identification of affected provisions</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Operation macro F1</td>
+<td>Insertion, deletion, substitution, repeal, and renumbering</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Linking accuracy</td>
+<td>Correct amendment-to-provision link</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Reconstruction correctness</td>
+<td>Verified current wording after chronological application</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Gold amendment events recovered</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Unresolved-case rate</td>
+<td>Ambiguous events sent for review</td>
+<td>[VALUE]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="411-integrated-prototype-and-user-evaluation">4.11 Integrated Prototype and User Evaluation</h3>
+<p>The final prototype evaluation should use representative tasks such as locating arrest-related rights, identifying the penalty for a selected offence, comparing original and simplified wording, and viewing the history of an amended provision. Record task success, completion time, satisfaction, comprehension, and observed errors. Compare participant types descriptively unless the final sample supports inferential analysis.</p>
+<p><strong>Table 12: Integrated prototype evaluation fields</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Citizens</th>
+<th>Law Students</th>
+<th>Lawyers</th>
+<th>Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task success rate</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Median completion time</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Mean satisfaction</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+</tr>
+<tr>
+<td>Mean comprehension</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+<td>[VALUE]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chapter-5-discussion">CHAPTER 5: DISCUSSION</h2>
+<h3 id="51-interpretation-of-the-user-needs-findings">5.1 Interpretation of the User Needs Findings</h3>
+<p>The survey indicates that legal access problems are not confined to document availability. Respondents reported difficulty with vocabulary, sentence structure, provision retrieval, and amendments. A majority preferred either bilingual access or Sinhala, and 71.0 percent were likely or very likely to try the proposed system. The results therefore support an interface that joins extraction, explanation, and version information rather than presenting these features as unrelated tools.</p>
+<p>The citizen results show a practical confidence gap. Sixteen of 21 citizens were not at all or only slightly confident about what to do after a possible fundamental-rights violation. This does not mean that an automated system should recommend legal action. It means that the system should help users locate relevant provisions, understand introductory information, and prepare questions for a qualified service or lawyer.</p>
+<h3 id="52-implications-for-legal-ner">5.2 Implications for Legal NER</h3>
+<p>The five entity classes reflect the most important concepts identified in the research objectives and survey. Highlighting rights and named offences received strong support. Temporal entities are also important because users prioritised dates and deadlines, while penalties require complete span boundaries. The annotation experience showed that random sampling produced too many empty passages. Entity-enriched sampling was therefore necessary, but keyword cues were used only for selection. Human annotators remained responsible for the labels, preventing circular evaluation.</p>
+<p>Final performance should be interpreted using both micro and macro metrics. A model may achieve a high micro-F1 by performing well on frequent entities while failing on rare fundamental rights or constitutional bodies. Language-specific reporting is equally important. A combined bilingual score cannot establish acceptable Sinhala performance.</p>
+<h3 id="53-implications-for-simplification">5.3 Implications for Simplification</h3>
+<p>The high usefulness rating for simpler explanations is consistent with respondents' difficulty understanding legal terminology and complex sentences. Trust responses show, however, that explanation alone is insufficient. Users want the original legal wording, exact references, official sources, review evidence, and accuracy results. The prototype should therefore show simplification as an explanatory layer attached to the source provision, not as a replacement for it.</p>
+<h3 id="54-implications-for-amendment-tracking">5.4 Implications for Amendment Tracking</h3>
+<p>Fourteen respondents reported difficulty identifying amendments or updated provisions. The student responses also show inconsistent amendment checking. Amendment tracking can reduce the effort required to find changes, but automatic consolidation creates a higher legal risk than ordinary text highlighting. The system should expose the amending instruction, affected provision, operation type, source document, and verification status. Ambiguous operations should remain unresolved rather than being silently applied.</p>
+<h3 id="55-methodological-strengths">5.5 Methodological Strengths</h3>
+<ul>
+<li>Source provenance connects every processed record to its legal PDF and page where recoverable.</li>
+<li>OCR output is separated from reviewed text, preventing corrections from destroying extraction evidence.</li>
+<li>The corpus uses human annotation and adjudication rather than automatically generated gold labels.</li>
+<li>Provision-level grouping reduces train and test leakage.</li>
+<li>Evaluation separates languages, document types, entity classes, and development versus final test results.</li>
+<li>The survey links system features to observed user needs and trust requirements.</li>
+</ul>
+<h3 id="56-limitations">5.6 Limitations</h3>
+<p>The source collection does not contain every constitutional amendment as a separate bilingual instrument. Some Sinhala documents require OCR and manual verification. The bilingual alignment baseline remains provisionally reviewed. The survey uses a small convenience sample, including only three lawyers, so subgroup percentages should not be generalised to all Sri Lankan legal professionals. Self-reported likelihood to use a system does not measure actual use.</p>
+<p>Model results, simplification scores, amendment metrics, and usability results remain incomplete until the corresponding phases produce verified outputs. The final thesis must replace every bracketed field with traceable results or state that the evaluation was not completed. Target values in the methodology must never be described as achieved performance.</p>
+<h3 id="57-threats-to-validity">5.7 Threats to Validity</h3>
+<p><strong>Table 13: Threats to validity and controls</strong></p>
+<table>
+<thead>
+<tr>
+<th>Threat</th>
+<th>Possible Effect</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCR errors</td>
+<td>Incorrect entities, references, dates, or penalties</td>
+<td>Page-level provenance, manual review, and exclusion of unverified records</td>
+</tr>
+<tr>
+<td>Annotation ambiguity</td>
+<td>Inconsistent boundaries or classes</td>
+<td>Guidelines, shared subset, agreement measures, and adjudication</td>
+</tr>
+<tr>
+<td>Sampling bias in corpus</td>
+<td>Inflated performance on cue-rich passages</td>
+<td>Retain negative examples and test on untouched provision groups</td>
+</tr>
+<tr>
+<td>Train-test leakage</td>
+<td>Overstated model accuracy</td>
+<td>Group by parent provision and deduplicate before splitting</td>
+</tr>
+<tr>
+<td>Survey convenience sampling</td>
+<td>Limited population generalisability</td>
+<td>Report descriptive findings and exact subgroup sizes</td>
+</tr>
+<tr>
+<td>Expert-review subjectivity</td>
+<td>Variable simplification ratings</td>
+<td>Rubric, multiple reviewers, and agreement reporting</td>
+</tr>
+<tr>
+<td>Incomplete amendment collection</td>
+<td>Incomplete legal history</td>
+<td>State collection boundaries and avoid unsupported consolidation claims</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chapter-6-conclusion-and-future-work">CHAPTER 6: CONCLUSION AND FUTURE WORK</h2>
+<h3 id="61-conclusion">6.1 Conclusion</h3>
+<p>This research defines and implements a staged framework for bilingual analysis of the Sri Lankan Constitution and Penal Code. The completed work establishes source provenance, extraction, OCR quality controls, provisional provision alignment, annotation guidelines, corpus preparation, and the experimental design for legal NER. The needs assessment shows that users encounter difficulties with terminology, long sentences, provision retrieval, source reliability, and amendment identification. Respondents also expressed strong interest in simpler explanations, entity highlighting, bilingual access, and source-linked information.</p>
+<p>The contribution is therefore both technical and user-centred. The framework treats accuracy, traceability, and legal meaning as connected requirements. A useful legal NLP system must identify key information, retain the original provision, disclose its document version, and mark uncertain outputs. The final contribution will be established after the NER, simplification, amendment, and prototype evaluations are completed using the methods specified in this thesis.</p>
+<h3 id="62-recommendations-for-completing-the-research">6.2 Recommendations for Completing the Research</h3>
+<ol>
+<li>Finish adjudication and export one immutable gold corpus with version and checksum.</li>
+<li>Generate leakage-controlled grouped splits and publish the split manifest.</li>
+<li>Run every NER experiment using the same splits and record seeds, package versions, and checkpoints.</li>
+<li>Evaluate the held-out test set only after model selection and retain raw predictions for audit.</li>
+<li>Create a legal-review rubric and verified examples for simplification before citizen comprehension testing.</li>
+<li>Construct a manually verified amendment gold set covering each operation type and both languages where sources permit.</li>
+<li>Complete the integrated usability study and report subgroup sizes with descriptive statistics.</li>
+<li>Replace every bracketed field in Chapters 4 to 6 and reconcile all tables, figures, abstract values, and conclusions.</li>
+</ol>
+<h3 id="63-future-work">6.3 Future Work</h3>
+<p>Future work may extend the corpus to Tamil, additional statutes, regulations, and selected case law. A larger expert-reviewed simplification corpus could support controlled sequence-to-sequence modelling. Active learning could reduce annotation effort by selecting uncertain and diverse provisions. Amendment graphs could represent dependencies among statutes and provisions. Any public deployment should include scheduled source updates, legal review, model monitoring, versioned outputs, and a clear process for correcting errors.</p>
+<hr />
+<h2 id="references">REFERENCES</h2>
+<ol>
+<li>
+<p>Alva-Manchego, F., Scarton, C., and Specia, L. (2020). A survey of automatic text simplification. <em>ACM Computing Surveys</em>, 53(2), 1–36.</p>
+</li>
+<li>
+<p>Bandara, M., et al. (2022). Legal party extraction from legal opinion texts using recurrent deep neural networks. <em>Journal of Data Intelligence</em>, 3(4), 421–441.</p>
+</li>
+<li>
+<p>Cardellino, C., Teruel, M., and Alvez, P. (2017). Legal named entity recognition for the Spanish language. <em>Proceedings of JURIX 2017</em>, 173–178.</p>
+</li>
+<li>
+<p>Chalkidis, I., Fergadiotis, M., Malakasiotis, P., Aletras, N., and Androutsopoulos, I. (2020). LEGAL-BERT: The Muppets straight out of law school. <em>Findings of EMNLP 2020</em>, 2898–2904.</p>
+</li>
+<li>
+<p>Dale, R. (2021). Text simplification in the legal domain. <em>Natural Language Engineering</em>, 27(3), 361–374.</p>
+</li>
+<li>
+<p>Deusser, T., et al. (2024). A comparative study of large language models for named entity recognition in the legal domain. <em>IEEE International Conference on Big Data</em>, 4737–4742.</p>
+</li>
+<li>
+<p>Dissanayaka, D., et al. (2024). An integrated approach to enhance legal information retrieval of Sri Lankan Supreme Court verdicts. <em>IEEE conference proceedings</em>.</p>
+</li>
+<li>
+<p>Fernando, W. S., Handapangoda, M., Samindi, N., Gamage, M., and Alwis, D. (2024). LawKey Law Constitution Chatbot. <em>8th SLAAI International Conference on Artificial Intelligence</em>, 1–6.</p>
+</li>
+<li>
+<p>Jayasooriya, S., et al. (2023). Automated information extraction from Supreme Court verdicts. <em>IEEE conference proceedings</em>, 1–8.</p>
+</li>
+<li>
+<p>Kothelawala, I. (2019). <em>Incorporating plain legal language in mortgage bonds</em>. University of Kelaniya Repository.</p>
+</li>
+<li>
+<p>Kumar, A., et al. (2022). On the effectiveness of pre-trained language models for legal natural language processing: An empirical study. <em>IEEE ICMLA</em>, 456–463.</p>
+</li>
+<li>
+<p>Leitner, E., Rehm, G., and Moreno-Schneider, J. (2021). A survey of named entity recognition in legal documents. <em>JURIX</em>, 89–98.</p>
+</li>
+<li>
+<p>Premasiri, D., Ranasinghe, T., Mitkov, R., El-Haj, M., and Frommholz, I. (2025). Survey on legal information extraction: Current status and open challenges. <em>Knowledge and Information Systems</em>, 67, 11287–11358.</p>
+</li>
+<li>
+<p>Radhika, A., et al. (2024). Optimization of natural language processing models for multilingual legal document analysis. <em>INCOS 2024</em>, 1–6.</p>
+</li>
+<li>
+<p>Senaratna, N. I. (2025). Sri Lanka Document Datasets: A large-scale multilingual resource for law, news, and policy. <em>arXiv preprint</em>.</p>
+</li>
+<li>
+<p>Seneviratne, D., et al. (2022). Context-sensitive verb similarity dataset for legal information extraction. <em>Data</em>, 7(3), 33.</p>
+</li>
+<li>
+<p>Smywinski-Pohl, A., Piech, M., Kaleta, Z., and Wrobel, K. (2021). Automatic extraction of amendments from Polish statutory law. <em>Proceedings of ICAIL</em>, 225–229.</p>
+</li>
+<li>
+<p>Tulajiang, P., Sun, Y., Zhang, Y., Le, Y., Xiao, K., and Lin, H. (2025). A bilingual legal NER dataset and semantics-aware cross-lingual label transfer method for low-resource languages. <em>ACM Transactions on Asian and Low-Resource Language Information Processing</em>, 24(9), 1–21.</p>
+</li>
+<li>
+<p>Yulianti, E., et al. (2024). Named entity recognition on Indonesian legal documents: A dataset and study using transformer-based models. <em>International Journal of Electrical and Computer Engineering</em>, 14(5), 5489–5501.</p>
+</li>
+</ol>
+<hr />
+<h2 id="appendices">APPENDICES</h2>
+<h3 id="appendix-a-survey-analysis-notes">Appendix A: Survey Analysis Notes</h3>
+<p>All 31 records contained affirmative consent and age confirmation. Role-specific blanks created by Google Forms branching were treated as structurally missing rather than non-response. Multiple-selection questions were counted by recognised option text. One law-student matrix response contained a non-scale phrase in several difficulty columns and was treated as invalid for ordinal summaries. No inferential test was used to compare the three lawyers with the larger groups.</p>
+<p><strong>Table A1: Survey quality check</strong></p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valid consent</td>
+<td>31 of 31</td>
+</tr>
+<tr>
+<td>Age 18 or above</td>
+<td>31 of 31</td>
+</tr>
+<tr>
+<td>Citizens</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Law students</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Lawyers</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Likely or very likely to try the system</td>
+<td>22 of 31 (71.0%)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appendix-b-data-insertion-checklist">Appendix B: Data Insertion Checklist</h3>
+<ol>
+<li>Insert gold-corpus record and entity counts by class, language, and document type.</li>
+<li>Insert inter-annotator exact-span precision, recall, F1, Cohen kappa, and adjudication counts.</li>
+<li>Insert split sizes and confirm that parent-provision overlap is zero.</li>
+<li>Insert fold-level and held-out NER results from machine-readable experiment files.</li>
+<li>Insert per-class error examples without exposing unverified legal conclusions.</li>
+<li>Insert simplification readability, comprehension, preservation, and expert-review results.</li>
+<li>Insert amendment reference, operation, linking, reconstruction, completeness, and unresolved-case results.</li>
+<li>Insert prototype task success, completion time, satisfaction, and comprehension results.</li>
+<li>Update the abstract, conclusion, lists of tables and figures, and all cross-references.</li>
+<li>Verify every bibliographic record against the original publication before submission.</li>
+</ol>
+<h3 id="appendix-c-reproducibility-record">Appendix C: Reproducibility Record</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Required Final Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repository commit</td>
+<td>[GIT COMMIT HASH]</td>
+</tr>
+<tr>
+<td>Gold corpus version</td>
+<td>[VERSION AND SHA-256]</td>
+</tr>
+<tr>
+<td>Split manifest</td>
+<td>[PATH AND SHA-256]</td>
+</tr>
+<tr>
+<td>Python version</td>
+<td>3.11.x</td>
+</tr>
+<tr>
+<td>Model checkpoints</td>
+<td>[EXACT MODEL IDENTIFIERS]</td>
+</tr>
+<tr>
+<td>Random seeds</td>
+<td>[VALUES]</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>[CPU GPU RAM]</td>
+</tr>
+<tr>
+<td>Experiment configuration</td>
+<td>[CONFIG FILES]</td>
+</tr>
+<tr>
+<td>Final result directory</td>
+<td>[PATH]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-d-evaluation-formulas-and-result-insertion-rules">APPENDIX D: EVALUATION FORMULAS AND RESULT INSERTION RULES</h2>
+<h3 id="d1-classification-and-ner">D.1 Classification and NER</h3>
+<p>For every class, report true positives (TP), false positives (FP), false negatives (FN), and
+support. Precision, recall, and F1 are calculated as:</p>
+<p>[
+Precision=rac{TP}{TP+FP},\quad Recall=rac{TP}{TP+FN},\quad
+F_1=rac{2  imes Precision  imes Recall}{Precision+Recall}.
+]</p>
+<p>Micro scores pool counts across classes. Macro-F1 is the arithmetic mean of the five class-level
+F1 scores. For five comparable folds:</p>
+<p>[
+ar{x}=rac{1}{5}\sum_{i=1}^{5}x_i,\qquad
+s=\sqrt{rac{\sum_{i=1}^{5}(x_i-ar{x})^2}{4}}.
+]</p>
+<h3 id="d2-annotation-agreement">D.2 Annotation agreement</h3>
+<p>[
+\kappa=rac{p_o-p_e}{1-p_e}.
+]</p>
+<p>The pilot produced 83 exact shared spans, 188 annotator-1 spans, and 125 annotator-2 spans. The
+directional exact-span comparison gives precision <code>83/125 = 0.6640</code>, recall <code>83/188 = 0.4415</code>, and
+F1 <code>0.5304</code>. Token kappa was <code>0.6466</code>. Both measures must be reported.</p>
+<h3 id="d3-simplification-amendment-and-usability">D.3 Simplification, amendment, and usability</h3>
+<p>[
+Preservation\ Rate=rac{Required\ source\ items\ retained}{Required\ source\ items},\quad
+Comprehension=rac{Correct\ answers}{All\ questions}.
+]</p>
+<p>[
+Linking\ Accuracy=rac{Correct\ amendment\ links}{All\ gold\ amendment\ events},\quad
+Unresolved\ Rate=rac{Unresolved\ events}{All\ processed\ events}.
+]</p>
+<p>[
+Task\ Success=rac{Successfully\ completed\ tasks}{All\ attempted\ tasks}.
+]</p>
+<p>All currently unavailable values remain <strong>PENDING — NOT YET MEASURED</strong>. A value may replace a
+placeholder only when its raw dataset, configuration, calculation script, and output are archived.</p>
+<hr />
+<p><strong>End of Thesis</strong></p></body></html>

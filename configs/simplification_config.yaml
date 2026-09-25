@@ -1,0 +1,29 @@
+project:
+  random_seed: 2026
+
+mode:
+  default: hybrid_baseline
+  supervised_training_requires_verified_pairs: true
+  separate_translation_from_simplification: true
+
+preservation:
+  entities: true
+  citations: true
+  negation: true
+  obligations: true
+  prohibitions: true
+  exceptions: true
+  conditions: true
+  penalties: true
+
+resources:
+  glossary: data/annotation/legal_glossary.jsonl
+  glossary_requires_legal_review: true
+
+evaluation:
+  require_sinhala_validated_readability_measure: true
+  citizen_comprehension: true
+  legal_expert_accuracy: true
+  omission_and_hallucination_analysis: true
+  semantic_similarity_is_secondary: true
+  default_review_status: pending_expert_review

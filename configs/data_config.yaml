@@ -1,0 +1,134 @@
+project:
+  name: sri_lankan_legal_nlp
+  random_seed: 2026
+  encoding: utf-8
+
+sources:
+  legal_pdf_root: 'F:/Me/Research/Dataset/Constitution_&_Penalcode'
+  research_report: 'F:/Me/Research/IM_2021_118_Research report.pdf'
+  interim_report: 'F:/Me/Research/Interim/IM_2021_118-Interim.pdf'
+  modify_sources: false
+  documents:
+    constitution.pdf:
+      document_id: constitution_en_2023_consolidated
+      document_type: constitution
+      document_title: Constitution of the Democratic Socialist Republic of Sri Lanka
+      language: en
+      edition_note: Revised Edition 2023; amended through 2022-10-31
+    constitution-si.pdf:
+      document_id: constitution_si_2023_consolidated
+      document_type: constitution
+      document_title: Constitution of the Democratic Socialist Republic of Sri Lanka
+      language: si
+      edition_note: Sinhala consolidated edition; metadata requires manual verification
+    'Penal Code.pdf':
+      document_id: penal_code_en_consolidated_2006
+      document_type: penal_code
+      document_title: Penal Code of Sri Lanka
+      language: en
+      edition_note: Consolidated text listing amendments through Act 16 of 2006
+      corpus_role: canonical_english_base_through_2006
+    'Penal-Code I.pdf':
+      document_id: penal_code_en_collection_2024
+      document_type: penal_code
+      document_title: Penal Code of Sri Lanka
+      language: en
+      edition_note: LankaLAW consolidated collection and amendments up to 2023
+      corpus_role: later_english_amendment_source_collection
+    'දණ්ඩ නීති සංග්_රහය.pdf':
+      document_id: penal_code_si_scan
+      document_type: penal_code
+      document_title: Penal Code of Sri Lanka
+      language: si
+      edition_note: Scanned Sinhala edition; exact edition requires manual verification
+    Amendment_PenalCode_Sinhala_1980_Dec_11.pdf:
+      document_id: penal_code_amendment_si_1980_50
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '50/1980'
+      edition_note: Filename/title-derived metadata pending verification
+    Amendment_PenalCode_Sinhala_1998_Juny_04.pdf:
+      document_id: penal_code_amendment_si_1998_29
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '29/1998'
+      edition_note: Filename/title-derived metadata pending verification
+    Amendment_PenalCode_Sinhala_2002_July_17.pdf:
+      document_id: penal_code_amendment_si_2002_12
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '12/2002'
+      edition_note: Filename/title-derived metadata pending verification
+    Amendment_PenalCode_Sinhala_2006_Apr_24.pdf:
+      document_id: penal_code_amendment_si_2006_16
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '16/2006'
+      edition_note: Filename/title-derived metadata pending verification
+    Amendment_PenalCode_Sinhala_2018_May_21.pdf:
+      document_id: penal_code_amendment_si_2018_10
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '10/2018'
+      edition_note: Filename/title-derived metadata pending verification
+    Amendment_PenalCode_Sinhala_2021_Jan_18.pdf:
+      document_id: penal_code_amendment_si_2021_5
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '5/2021'
+      edition_note: Filename/title-derived metadata pending verification
+    Amendment_PenalCode_Sinhala_2021_Oct_26.pdf:
+      document_id: penal_code_amendment_si_2021_25
+      document_type: amendment
+      document_title: Penal Code amendment candidate
+      language: si
+      amendment_number: '25/2021'
+      edition_note: Filename/title-derived metadata pending verification
+
+paths:
+  raw: data/raw
+  extracted: data/extracted
+  aligned: data/aligned
+  annotation: data/annotation
+  processed: data/processed
+  splits: data/splits
+  results: results
+
+languages:
+  included: [en, si]
+  excluded: [ta]
+
+extraction:
+  embedded_text_first: true
+  preserve_page_boundaries: true
+  unicode_normalization: NFC
+  ocr_fallback: true
+  ocr_languages:
+    en: eng
+    si: sin
+  minimum_non_whitespace_characters_per_page: 40
+  maximum_replacement_character_ratio: 0.001
+  verification_default: pending_review
+  repeated_boundary_line_minimum_fraction: 0.60
+  repeated_boundary_line_minimum_pages: 3
+  ocr_dpi: 300
+  tesseract_executable: 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+  tessdata_directory: resources/tessdata
+
+alignment:
+  method: exact_unique_structural_match
+  use_page_number_as_alignment_evidence: false
+  default_manual_review_status: pending_review
+  document_pairs:
+    - document_type: constitution
+      english_document_id: constitution_en_2023_consolidated
+      sinhala_document_id: constitution_si_2023_consolidated
+    - document_type: penal_code
+      english_document_id: penal_code_en_consolidated_2006
+      sinhala_document_id: penal_code_si_scan

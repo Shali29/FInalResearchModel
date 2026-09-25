@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sri-lankan-legal-nlp"
+version = "0.1.0"
+description = "Bilingual NLP research for the Sri Lankan Constitution and Penal Code"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "Research use; source legal documents retain their original terms" }
+authors = [{ name = "R. A. Shalika Rumeshani Ramanayaka" }]
+dependencies = [
+  "PyYAML>=6.0,<7.0",
+  "pydantic>=2.7,<3.0",
+]
+
+[project.scripts]
+sl-legal-nlp = "sri_lankan_legal_nlp.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

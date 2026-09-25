@@ -1,0 +1,89 @@
+project:
+  random_seed: 2026
+
+paths:
+  extracted_records: data/extracted/records.jsonl
+  annotation: data/annotation
+  splits: data/splits
+
+preparation:
+  maximum_task_characters: 1800
+  pilot_task_count: 500
+  shared_subset_fraction: 0.10
+  include_quality_statuses:
+    - verified
+    - pending_review
+  enriched_pilot_per_language_entity_group: 50
+  enrichment_cues:
+    en:
+      fundamental_right: '\bright\b|\bfreedom\b|equal protection|non-discrimination'
+      offense: '\boffen[cs]e\b|\bguilty\b|\bcommits?\b'
+      penalty: '\bimprisonment\b|\bfine\b|\bpunish|\bforfeit|death penalty'
+      constitutional_body: '\bCommission\b|\bParliament\b|\bSupreme Court\b|\bCouncil\b'
+      temporal: '\b(?:days?|months?|years?)\b|\b(?:19|20)\d{2}\b|\bwithin\b'
+    si:
+      fundamental_right: 'අයිතිවාසික|නිදහස|සමාන'
+      offense: 'වරද|අපරාධ|වැරදි'
+      penalty: 'දඬුව|බන්ධනාගාර|දඩය|සිර'
+      constitutional_body: 'කොමිෂන්|පාර්ලිමේන්තුව|ශ්‍රේෂ්ඨාධිකරණ|සභාව'
+      temporal: 'වසර|අවුරුදු|මාස|දින|කාලය'
+
+annotation:
+  tagging_scheme: BIO
+  labels:
+    - FUNDAMENTAL_RIGHT
+    - OFFENSE
+    - PENALTY
+    - CONSTITUTIONAL_BODY
+    - TEMPORAL_ENTITY
+  legal_reference_label_status: pending_researcher_confirmation
+  allow_overlapping_spans: false
+  minimum_annotators_for_shared_subset: 2
+
+splitting:
+  group_by: provision_id
+  final_test_fraction: 0.15
+  validation_fraction: 0.15
+  development_cross_validation_folds: 5
+  reduce_folds_when_class_support_is_insufficient: true
+
+models:
+  rule_baseline: true
+  crf_baseline: true
+  multilingual_bert: bert-base-multilingual-cased
+  bilingual_transformer: xlm-roberta-base
+  english_legal_bert: pending_checkpoint_review
+  use_english_legal_bert_for_sinhala: false
+
+training:
+  selection_metric: validation_macro_f1
+  early_stopping: true
+  detect_device: true
+  safe_limited_hardware_defaults: true
+
+evaluation:
+  primary_match: exact_span
+  report_micro_f1: true
+  report_macro_f1: true
+  report_per_class: true
+  report_by_language: true
+  report_by_document_type: true
+  token_metrics_secondary: true
+
+phase6:
+  split_dir: data/splits/provisional
+  output_dir: results/ner/baselines
+  corpus_status: provisional_not_final_gold
+  evaluate_test: false
+
+transformer_training:
+  max_length: 256
+  batch_size: 2
+  gradient_accumulation_steps: 1
+  learning_rate: 0.00002
+  epochs: 5
+  early_stopping_patience: 2
+  class_weighting: true
+  class_weight_power: 0.5
+  maximum_class_weight: 8.0
+  run_name_suffix: --balanced-v1

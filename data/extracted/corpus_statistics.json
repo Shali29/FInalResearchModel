@@ -1,0 +1,62 @@
+[
+  {
+    "language": "en",
+    "document_type": "constitution",
+    "pages": 306,
+    "usable_page_records": 306,
+    "provision_heading_candidates": 373,
+    "unique_provision_number_candidates": 246,
+    "sentences_estimated": 3787,
+    "tokens_estimated": 70668,
+    "extraction_warnings": 306,
+    "rejected_pages": 0
+  },
+  {
+    "language": "en",
+    "document_type": "penal_code",
+    "pages": 278,
+    "usable_page_records": 278,
+    "provision_heading_candidates": 1070,
+    "unique_provision_number_candidates": 522,
+    "sentences_estimated": 5517,
+    "tokens_estimated": 131514,
+    "extraction_warnings": 131,
+    "rejected_pages": 0
+  },
+  {
+    "language": "si",
+    "document_type": "amendment",
+    "pages": 49,
+    "usable_page_records": 49,
+    "provision_heading_candidates": 85,
+    "unique_provision_number_candidates": 32,
+    "sentences_estimated": 524,
+    "tokens_estimated": 15857,
+    "extraction_warnings": 49,
+    "rejected_pages": 0
+  },
+  {
+    "language": "si",
+    "document_type": "constitution",
+    "pages": 289,
+    "usable_page_records": 283,
+    "provision_heading_candidates": 454,
+    "unique_provision_number_candidates": 172,
+    "sentences_estimated": 4264,
+    "tokens_estimated": 105359,
+    "extraction_warnings": 286,
+    "rejected_pages": 6
+  },
+  {
+    "language": "si",
+    "document_type": "penal_code",
+    "pages": 140,
+    "usable_page_records": 139,
+    "provision_heading_candidates": 374,
+    "unique_provision_number_candidates": 314,
+    "sentences_estimated": 3969,
+    "tokens_estimated": 112487,
+    "extraction_warnings": 140,
+    "rejected_pages": 1
+  }
+]

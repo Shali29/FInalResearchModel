@@ -19,7 +19,7 @@ configs/*_local.yaml
 # Raw/legal documents and generated datasets
 data/raw/**/*
 !data/raw/**/.gitkeep
-data/extracted/**/*
+
 !data/extracted/.gitkeep
 !data/extracted/records.jsonl
 data/aligned/**/*

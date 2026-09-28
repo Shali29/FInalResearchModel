@@ -20,6 +20,14 @@ resources:
   glossary: data/annotation/legal_glossary.jsonl
   glossary_requires_legal_review: true
 
+paths:
+  input_records: data/extracted/records.jsonl
+  verified_pairs: data/processed/verified_simplification_pairs.jsonl
+  output_dir: results/simplification
+
+review_batch:
+  maximum_records: 100
+
 evaluation:
   require_sinhala_validated_readability_measure: true
   citizen_comprehension: true

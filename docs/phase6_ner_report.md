@@ -74,3 +74,20 @@ falling training loss (1.9478, 1.7256, 1.4404), but exact-span validation macro-
 The selected checkpoint predicted four `OFFENSE` spans; none exactly matched the 37 gold spans
 (`tp=0`, `fp=4`, `fn=37`). The test set remained untouched. Further transformer tuning is deferred
 until the annotated corpus is expanded and independently reviewed.
+
+## Expanded-corpus baseline rerun
+
+After completion of the five-part, 420-task Annotator 1 expansion, the baselines were rerun using
+the 350-task training set and the 75-task validation set under
+`data/splits/expanded_provisional/`. The 75-task held-out test set was not evaluated.
+
+| Model | Exact-span micro-F1 | Exact-span macro-F1 | English micro-F1 | Sinhala micro-F1 |
+|---|---:|---:|---:|---:|
+| Training-derived dictionary | 0.1077 | 0.0672 | 0.1212 | 0.0863 |
+| CRF | 0.1985 | 0.1208 | 0.2118 | 0.1594 |
+
+The expanded CRF improves over the earlier 80-task provisional run, but performance remains well
+below the proposed targets. `FUNDAMENTAL_RIGHT` and `TEMPORAL_ENTITY` have zero exact-match F1 in
+this validation run, and the expansion has only one annotator so far. These are provisional
+technical results, not final thesis test results. Detailed metrics and predictions are stored in
+`results/ner/expanded_baselines/`.

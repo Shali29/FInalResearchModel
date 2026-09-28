@@ -18,10 +18,11 @@ this repository.
 - Phase 1: completed and verified with Python 3.11.0
 - Phase 2: extraction software and automated run completed; OCR corrections/manual review pending
 - Phase 3: conservative alignment software and automated run completed; bilingual review pending
-- Phase 4: two-annotator pilot, provisional adjudication, and targeted gap batch completed
-- Phase 5: provisional leakage-safe 70/15/15 split and five development folds completed
-- Phase 6: dictionary and CRF baselines completed on provisional validation data; transformers pending
-- Phases 7-11: not yet executed
+- Phase 4: five-part 420-task Annotator 1 expansion completed and validated; independent 84-task Annotator 2 subset pending
+- Phase 5: expanded provisional 500-task leakage-safe split and five development folds completed
+- Phase 6: dictionary and CRF baselines rerun on expanded provisional validation data; expanded transformer reruns pending
+- Phase 7: data-readiness audit and blank expert-review workflow implemented; verified pairs and glossary pending
+- Phases 8-11: not yet executed
 
 See [the Phase 0 audit](docs/phase0_audit_and_implementation_plan.md) before changing scope or
 starting annotation.
@@ -117,7 +118,7 @@ python -m sri_lankan_legal_nlp prepare-annotation --config configs\ner_config.ya
 python -m sri_lankan_legal_nlp split --config configs\ner_config.yaml
 
 # Phase 5: create the current provisional grouped datasets
-python scripts\create_grouped_splits.py data\processed\provisional_combined_corpus.jsonl data\splits\provisional
+python scripts\create_grouped_splits.py data\processed\expanded_provisional_corpus.jsonl data\splits\expanded_provisional
 
 # Phase 6: NER experiments
 python -m sri_lankan_legal_nlp train-ner --config configs\ner_config.yaml

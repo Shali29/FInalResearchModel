@@ -11,6 +11,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("output", type=Path)
     parser.add_argument("inputs", type=Path, nargs="+")
+    parser.add_argument(
+        "--default-consensus-status",
+        default="single_annotator_targeted_gap_annotation",
+        help="Status assigned only to input rows that do not already declare one",
+    )
     args = parser.parse_args()
     merged: dict[str, dict] = {}
     for input_path in args.inputs:
@@ -21,7 +26,7 @@ def main() -> int:
             if row["id"] in merged:
                 raise ValueError(f"Duplicate task ID across corpora: {row['id']}")
             if "consensus_status" not in row:
-                row["consensus_status"] = "single_annotator_targeted_gap_annotation"
+                row["consensus_status"] = args.default_consensus_status
             merged[row["id"]] = row
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="\n") as stream:

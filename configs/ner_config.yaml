@@ -71,8 +71,8 @@ evaluation:
   token_metrics_secondary: true
 
 phase6:
-  split_dir: data/splits/provisional
-  output_dir: results/ner/baselines
+  split_dir: data/splits/expanded_provisional
+  output_dir: results/ner/expanded_baselines
   corpus_status: provisional_not_final_gold
   evaluate_test: false
 

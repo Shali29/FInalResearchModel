@@ -10,7 +10,6 @@ from pathlib import Path
 LOGGER = logging.getLogger(__name__)
 
 PHASE_COMMANDS = {
-    "simplify": 7,
     "track-amendments": 8,
     "analyze": 10,
     "qa": 11,
@@ -42,6 +41,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     ner = subparsers.add_parser("train-ner", help="Phase 6 NER baseline training")
     ner.add_argument("--config", type=Path, required=True, help="Path to the YAML config")
+
+    simplify = subparsers.add_parser("simplify", help="Phase 7 simplification review preparation")
+    simplify.add_argument("--config", type=Path, required=True, help="Path to the YAML config")
+    simplify.add_argument("--input", type=Path, help="Optional source JSONL override")
+    simplify.add_argument("--output", type=Path, help="Optional output directory override")
+    simplify.add_argument("--max-records", type=int, help="Optional review-batch size")
 
     for command, phase in PHASE_COMMANDS.items():
         child = subparsers.add_parser(command, help=f"Phase {phase} (not implemented yet)")
@@ -83,6 +88,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         from sri_lankan_legal_nlp.ner.train import run_ner
 
         return run_ner(args.config)
+
+    if args.command == "simplify":
+        from sri_lankan_legal_nlp.simplification.pipeline import run_simplification
+
+        return run_simplification(args.config, args.input, args.output, args.max_records)
 
     phase = PHASE_COMMANDS[args.command]
     LOGGER.error("Phase %s command '%s' is not implemented yet.", phase, args.command)

@@ -40,3 +40,21 @@ was Cohen's kappa 0.6466 and exact-span F1 0.5304, below the planned kappa thres
 These files allow Phase 6 pipeline testing and provisional experiments. Final thesis model results
 must be rerun after human approval/adjudication and, ideally, independent review of the targeted
 gap annotations.
+
+## Expanded provisional corpus (after five annotation parts)
+
+Annotator 1 completed all five expansion parts. The raw Label Studio exports were preserved,
+converted, whitespace-normalized with per-part audit logs, and validated. The expansion contains
+420 tasks. After merging it with the earlier 80-task corpus, the expanded provisional corpus has:
+
+- 500 tasks (255 English and 245 Sinhala)
+- 2,002 annotated entity spans
+- 350 training, 75 validation, and 75 untouched test tasks
+- zero `parent_record_id` overlap between train, validation, and test
+- all five entity classes represented for both languages in every split
+
+Artifacts are stored at `data/processed/expanded_provisional_corpus.jsonl` and
+`data/splits/expanded_provisional/`. The 420 new tasks have status
+`single_annotator_expansion_annotation`. The 84-task shared expansion subset still requires an
+independent Annotator 2 export, agreement calculation, and human adjudication. Therefore these
+splits remain provisional and are not final gold data.

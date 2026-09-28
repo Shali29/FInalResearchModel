@@ -21,6 +21,7 @@ data/raw/**/*
 !data/raw/**/.gitkeep
 data/extracted/**/*
 !data/extracted/.gitkeep
+!data/extracted/records.jsonl
 data/aligned/**/*
 !data/aligned/.gitkeep
 data/annotation/**/*
@@ -35,10 +36,13 @@ models/**/*
 !models/.gitkeep
 results/ner/**/*
 !results/ner/.gitkeep
+!results/ner/expanded_baselines/
+!results/ner/expanded_baselines/crf_model.joblib
 results/simplification/**/*
 !results/simplification/.gitkeep
 results/amendments/**/*
 !results/amendments/.gitkeep
+!results/amendments/amendment_candidates.jsonl
 results/figures/**/*
 !results/figures/.gitkeep
 

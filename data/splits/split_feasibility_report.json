@@ -1,0 +1,112 @@
+{
+  "corpus_status": "provisional_exact_agreement_only_pending_adjudication",
+  "task_count": 50,
+  "entity_count": 83,
+  "requested_grouped_cross_validation_folds": 5,
+  "grouping_key": "parent_record_id",
+  "language_label_support": [
+    {
+      "language": "en",
+      "label": "FUNDAMENTAL_RIGHT",
+      "entity_count": 8,
+      "independent_group_count": 4,
+      "supports_requested_folds": false
+    },
+    {
+      "language": "en",
+      "label": "OFFENSE",
+      "entity_count": 13,
+      "independent_group_count": 6,
+      "supports_requested_folds": true
+    },
+    {
+      "language": "en",
+      "label": "PENALTY",
+      "entity_count": 13,
+      "independent_group_count": 5,
+      "supports_requested_folds": true
+    },
+    {
+      "language": "en",
+      "label": "CONSTITUTIONAL_BODY",
+      "entity_count": 9,
+      "independent_group_count": 7,
+      "supports_requested_folds": true
+    },
+    {
+      "language": "en",
+      "label": "TEMPORAL_ENTITY",
+      "entity_count": 4,
+      "independent_group_count": 3,
+      "supports_requested_folds": false
+    },
+    {
+      "language": "si",
+      "label": "FUNDAMENTAL_RIGHT",
+      "entity_count": 0,
+      "independent_group_count": 0,
+      "supports_requested_folds": false
+    },
+    {
+      "language": "si",
+      "label": "OFFENSE",
+      "entity_count": 5,
+      "independent_group_count": 5,
+      "supports_requested_folds": true
+    },
+    {
+      "language": "si",
+      "label": "PENALTY",
+      "entity_count": 19,
+      "independent_group_count": 10,
+      "supports_requested_folds": true
+    },
+    {
+      "language": "si",
+      "label": "CONSTITUTIONAL_BODY",
+      "entity_count": 10,
+      "independent_group_count": 5,
+      "supports_requested_folds": true
+    },
+    {
+      "language": "si",
+      "label": "TEMPORAL_ENTITY",
+      "entity_count": 2,
+      "independent_group_count": 2,
+      "supports_requested_folds": false
+    }
+  ],
+  "five_fold_feasible": false,
+  "unsupported_cells": [
+    {
+      "language": "en",
+      "label": "FUNDAMENTAL_RIGHT",
+      "entity_count": 8,
+      "independent_group_count": 4,
+      "supports_requested_folds": false
+    },
+    {
+      "language": "en",
+      "label": "TEMPORAL_ENTITY",
+      "entity_count": 4,
+      "independent_group_count": 3,
+      "supports_requested_folds": false
+    },
+    {
+      "language": "si",
+      "label": "FUNDAMENTAL_RIGHT",
+      "entity_count": 0,
+      "independent_group_count": 0,
+      "supports_requested_folds": false
+    },
+    {
+      "language": "si",
+      "label": "TEMPORAL_ENTITY",
+      "entity_count": 2,
+      "independent_group_count": 2,
+      "supports_requested_folds": false
+    }
+  ],
+  "final_split_created": false,
+  "reason": "Final train/validation/test and cross-validation splits are withheld until adjudication and adequate independent group support exist for every required cell."
+}

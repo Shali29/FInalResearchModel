@@ -1,0 +1,91 @@
+{
+  "input": "data\\processed\\provisional_combined_corpus.jsonl",
+  "random_seed": 2026,
+  "grouping_key": "parent_record_id",
+  "corpus_statuses": [
+    "ai_assisted_adjudication_pending_human_approval",
+    "single_annotator_targeted_gap_annotation"
+  ],
+  "task_counts": {
+    "train": 56,
+    "validation": 12,
+    "test": 12
+  },
+  "group_counts": {
+    "train": 54,
+    "validation": 12,
+    "test": 12
+  },
+  "group_intersections": {
+    "train_validation": [],
+    "train_test": [],
+    "validation_test": []
+  },
+  "leakage_detected": false,
+  "target_fractions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "feature_coverage": {
+    "train": [
+      "document=amendment",
+      "document=constitution",
+      "document=penal_code",
+      "language=en",
+      "language=si",
+      "language_label=en:CONSTITUTIONAL_BODY",
+      "language_label=en:FUNDAMENTAL_RIGHT",
+      "language_label=en:OFFENSE",
+      "language_label=en:PENALTY",
+      "language_label=en:TEMPORAL_ENTITY",
+      "language_label=si:CONSTITUTIONAL_BODY",
+      "language_label=si:FUNDAMENTAL_RIGHT",
+      "language_label=si:OFFENSE",
+      "language_label=si:PENALTY",
+      "language_label=si:TEMPORAL_ENTITY"
+    ],
+    "validation": [
+      "document=constitution",
+      "document=penal_code",
+      "language=en",
+      "language=si",
+      "language_label=en:CONSTITUTIONAL_BODY",
+      "language_label=en:FUNDAMENTAL_RIGHT",
+      "language_label=en:OFFENSE",
+      "language_label=en:PENALTY",
+      "language_label=en:TEMPORAL_ENTITY",
+      "language_label=si:CONSTITUTIONAL_BODY",
+      "language_label=si:FUNDAMENTAL_RIGHT",
+      "language_label=si:OFFENSE",
+      "language_label=si:PENALTY",
+      "language_label=si:TEMPORAL_ENTITY"
+    ],
+    "test": [
+      "document=amendment",
+      "document=constitution",
+      "document=penal_code",
+      "language=en",
+      "language=si",
+      "language_label=en:CONSTITUTIONAL_BODY",
+      "language_label=en:FUNDAMENTAL_RIGHT",
+      "language_label=en:OFFENSE",
+      "language_label=en:PENALTY",
+      "language_label=en:TEMPORAL_ENTITY",
+      "language_label=si:CONSTITUTIONAL_BODY",
+      "language_label=si:FUNDAMENTAL_RIGHT",
+      "language_label=si:OFFENSE",
+      "language_label=si:PENALTY",
+      "language_label=si:TEMPORAL_ENTITY"
+    ]
+  },
+  "missing_features": {
+    "train": [],
+    "validation": [
+      "document=amendment"
+    ],
+    "test": []
+  },
+  "cross_validation_folds": 5,
+  "split_status": "provisional_not_final_gold"
+}

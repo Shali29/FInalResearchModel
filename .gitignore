@@ -28,7 +28,7 @@ configs/*_local.yaml
 !data/annotation/.gitkeep
 
 !data/processed/.gitkeep
-data/splits/**/*
+
 !data/splits/.gitkeep
 
 # Large experiment outputs

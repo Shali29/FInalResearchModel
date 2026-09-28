@@ -26,7 +26,7 @@ configs/*_local.yaml
 !data/aligned/.gitkeep
 
 !data/annotation/.gitkeep
-data/processed/**/*
+
 !data/processed/.gitkeep
 data/splits/**/*
 !data/splits/.gitkeep

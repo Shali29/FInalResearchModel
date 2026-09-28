@@ -17,7 +17,7 @@ Thumbs.db
 configs/*_local.yaml
 
 # Raw/legal documents and generated datasets
-data/raw/**/*
+
 !data/raw/**/.gitkeep
 
 !data/extracted/.gitkeep

@@ -22,7 +22,9 @@ this repository.
 - Phase 5: expanded provisional 500-task leakage-safe split and five development folds completed
 - Phase 6: dictionary and CRF baselines rerun on expanded provisional validation data; expanded transformer reruns pending
 - Phase 7: data-readiness audit and blank expert-review workflow implemented; verified pairs and glossary pending
-- Phases 8-11: not yet executed
+- Phase 8: deterministic amendment candidates and manual-review sheet implemented; gold review and consolidation pending
+- Phase 9: FastAPI backend and Streamlit research interface implemented; usability evaluation pending
+- Phases 10-11: not yet executed
 
 See [the Phase 0 audit](docs/phase0_audit_and_implementation_plan.md) before changing scope or
 starting annotation.
@@ -134,6 +136,10 @@ python -m sri_lankan_legal_nlp simplify --config configs\simplification_config.y
 python -m sri_lankan_legal_nlp track-amendments --config configs\amendment_config.yaml
 
 # Phase 9: API (after implementation)
+python -m uvicorn sri_lankan_legal_nlp.api.main:app --reload
+
+# Phase 9: interface (run in a second terminal)
+python -m streamlit run app\streamlit_app.py
 python -m uvicorn sri_lankan_legal_nlp.api.main:app --reload
 
 # Phase 10: research analysis

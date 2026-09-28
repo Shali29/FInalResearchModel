@@ -1,6 +1,10 @@
 project:
   random_seed: 2026
 
+paths:
+  extracted_records: data/extracted/records.jsonl
+  output_dir: results/amendments
+
 operations:
   - insertion
   - deletion

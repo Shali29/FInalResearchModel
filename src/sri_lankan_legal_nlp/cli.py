@@ -10,7 +10,6 @@ from pathlib import Path
 LOGGER = logging.getLogger(__name__)
 
 PHASE_COMMANDS = {
-    "track-amendments": 8,
     "analyze": 10,
     "qa": 11,
 }
@@ -47,6 +46,11 @@ def build_parser() -> argparse.ArgumentParser:
     simplify.add_argument("--input", type=Path, help="Optional source JSONL override")
     simplify.add_argument("--output", type=Path, help="Optional output directory override")
     simplify.add_argument("--max-records", type=int, help="Optional review-batch size")
+
+    amendments = subparsers.add_parser(
+        "track-amendments", help="Phase 8 deterministic amendment candidate extraction"
+    )
+    amendments.add_argument("--config", type=Path, required=True, help="Path to the YAML config")
 
     for command, phase in PHASE_COMMANDS.items():
         child = subparsers.add_parser(command, help=f"Phase {phase} (not implemented yet)")
@@ -93,6 +97,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         from sri_lankan_legal_nlp.simplification.pipeline import run_simplification
 
         return run_simplification(args.config, args.input, args.output, args.max_records)
+
+    if args.command == "track-amendments":
+        from sri_lankan_legal_nlp.amendments.pipeline import run_amendment_tracking
+
+        return run_amendment_tracking(args.config)
 
     phase = PHASE_COMMANDS[args.command]
     LOGGER.error("Phase %s command '%s' is not implemented yet.", phase, args.command)

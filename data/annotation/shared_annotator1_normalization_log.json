@@ -1,0 +1,322 @@
+[
+  {
+    "task_id": "annotation-a66feb21d470",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      34,
+      100,
+      "FUNDAMENTAL_RIGHT"
+    ],
+    "after": [
+      34,
+      99,
+      "FUNDAMENTAL_RIGHT"
+    ]
+  },
+  {
+    "task_id": "annotation-17207bb714f7",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      82,
+      147,
+      "FUNDAMENTAL_RIGHT"
+    ],
+    "after": [
+      83,
+      147,
+      "FUNDAMENTAL_RIGHT"
+    ]
+  },
+  {
+    "task_id": "annotation-16c4353f538a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      7,
+      29,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      9,
+      29,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-a79c5ceeef0d",
+    "action": "remove_confirmed_span",
+    "span": [
+      1557,
+      1568,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-ef3766e1b177",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      572,
+      620,
+      "OFFENSE"
+    ],
+    "after": [
+      573,
+      620,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-ef3766e1b177",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1042,
+      1049,
+      "PENALTY"
+    ],
+    "after": [
+      1043,
+      1049,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-ef3766e1b177",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1431,
+      1441,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      1432,
+      1441,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-3c78b833850c",
+    "action": "remove_empty_span",
+    "span": [
+      1016,
+      1017,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-64287627ee5f",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      694,
+      886,
+      "OFFENSE"
+    ],
+    "after": [
+      695,
+      886,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-6ad47586de9a",
+    "action": "remove_empty_span",
+    "span": [
+      22,
+      22,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-6ad47586de9a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      908,
+      923,
+      "PENALTY"
+    ],
+    "after": [
+      909,
+      923,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-6ad47586de9a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      938,
+      1059,
+      "OFFENSE"
+    ],
+    "after": [
+      939,
+      1059,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-233c4b273ec3",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      973,
+      978,
+      "PENALTY"
+    ],
+    "after": [
+      974,
+      978,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-6131d750cbf3",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      134,
+      182,
+      "OFFENSE"
+    ],
+    "after": [
+      135,
+      182,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-9526d7eacb0a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      469,
+      473,
+      "PENALTY"
+    ],
+    "after": [
+      469,
+      472,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-0e4e175a283c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      284,
+      316,
+      "PENALTY"
+    ],
+    "after": [
+      285,
+      315,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-7e8155d66d63",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      196,
+      209,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      196,
+      208,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-3a7db66573a7",
+    "action": "remove_confirmed_span",
+    "span": [
+      606,
+      608,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-3a7db66573a7",
+    "action": "remove_confirmed_span",
+    "span": [
+      607,
+      614,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-3a7db66573a7",
+    "action": "add_confirmed_span",
+    "span": [
+      606,
+      614,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-c0a7a38cee1f",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      352,
+      381,
+      "PENALTY"
+    ],
+    "after": [
+      352,
+      380,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-75b516a4a32f",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      552,
+      653,
+      "PENALTY"
+    ],
+    "after": [
+      553,
+      653,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-75b516a4a32f",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      765,
+      868,
+      "PENALTY"
+    ],
+    "after": [
+      765,
+      867,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-4405f2bd3839",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      37,
+      52,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      38,
+      52,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-aa9cf5a04c8b",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      15,
+      30,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      16,
+      30,
+      "CONSTITUTIONAL_BODY"
+    ]
+  }
+]

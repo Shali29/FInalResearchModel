@@ -1,0 +1,18 @@
+<View>
+  <Header value="Sri Lankan Legal NER - information extraction, not legal advice"/>
+  <Header size="4" value="Quick label guide"/>
+  <Header size="5" value="FUNDAMENTAL_RIGHT: an explicitly protected right or freedom"/>
+  <Header size="5" value="OFFENSE: an act or omission expressly made punishable"/>
+  <Header size="5" value="PENALTY: a fine, imprisonment, forfeiture, or other punishment"/>
+  <Header size="5" value="CONSTITUTIONAL_BODY: the official name of a constitutional institution or office"/>
+  <Header size="5" value="TEMPORAL_ENTITY: a date, duration, deadline, or frequency"/>
+  <Header size="5" value="Use no label when none applies. Do not label Article, Section, Act, or amendment references."/>
+  <Text name="text" value="$text"/>
+  <Labels name="label" toName="text">
+    <Label value="FUNDAMENTAL_RIGHT" background="#D4380D"/>
+    <Label value="OFFENSE" background="#096DD9"/>
+    <Label value="PENALTY" background="#389E0D"/>
+    <Label value="CONSTITUTIONAL_BODY" background="#722ED1"/>
+    <Label value="TEMPORAL_ENTITY" background="#D48806"/>
+  </Labels>
+</View>

@@ -1,0 +1,436 @@
+[
+  {
+    "task_id": "annotation-58e9e2bd7be1",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      21,
+      34,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      22,
+      34,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-58e9e2bd7be1",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      38,
+      64,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      38,
+      63,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-bcaf1097634c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      489,
+      579,
+      "PENALTY"
+    ],
+    "after": [
+      490,
+      579,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-935a879253b5",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      69,
+      123,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      70,
+      123,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-79d9a5476e53",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      3,
+      16,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      4,
+      16,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-0202ae5419a2",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      13,
+      27,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      14,
+      27,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-9b5fdb05ce6a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      209,
+      241,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      209,
+      240,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-47398539b346",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1048,
+      1206,
+      "OFFENSE"
+    ],
+    "after": [
+      1049,
+      1206,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-f04d2efb7215",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1234,
+      1431,
+      "OFFENSE"
+    ],
+    "after": [
+      1235,
+      1431,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-bfcea60b22d3",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1717,
+      1759,
+      "OFFENSE"
+    ],
+    "after": [
+      1718,
+      1759,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-101fca11a6a7",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      79,
+      146,
+      "FUNDAMENTAL_RIGHT"
+    ],
+    "after": [
+      80,
+      146,
+      "FUNDAMENTAL_RIGHT"
+    ]
+  },
+  {
+    "task_id": "annotation-f2e8898c2970",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1044,
+      1243,
+      "OFFENSE"
+    ],
+    "after": [
+      1045,
+      1243,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-99fc6d5edadf",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      916,
+      946,
+      "FUNDAMENTAL_RIGHT"
+    ],
+    "after": [
+      917,
+      946,
+      "FUNDAMENTAL_RIGHT"
+    ]
+  },
+  {
+    "task_id": "annotation-de2960465b13",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      169,
+      191,
+      "OFFENSE"
+    ],
+    "after": [
+      170,
+      191,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-323b8d5cec0c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      155,
+      408,
+      "OFFENSE"
+    ],
+    "after": [
+      156,
+      408,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-d2c60bff920c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      69,
+      82,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      70,
+      82,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-d2c60bff920c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      214,
+      230,
+      "PENALTY"
+    ],
+    "after": [
+      215,
+      230,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-d434b51a1288",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      5,
+      17,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      6,
+      17,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-d434b51a1288",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      160,
+      175,
+      "PENALTY"
+    ],
+    "after": [
+      161,
+      175,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-fd5de17523e7",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      161,
+      173,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      162,
+      173,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-9221ed5a9ee6",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      57,
+      69,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      58,
+      69,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-43271f2a94ff",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      12,
+      24,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      13,
+      24,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-c2041aa7d01e",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      11,
+      13,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      12,
+      13,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-00eab5f3ead5",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      80,
+      92,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      81,
+      92,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-12786834f281",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      7,
+      19,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      8,
+      19,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-d7f4372180da",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      3,
+      20,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      4,
+      20,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-1a038c386689",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      67,
+      69,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      68,
+      69,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-8658f5075b34",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      102,
+      114,
+      "FUNDAMENTAL_RIGHT"
+    ],
+    "after": [
+      103,
+      114,
+      "FUNDAMENTAL_RIGHT"
+    ]
+  },
+  {
+    "task_id": "annotation-01f82c785127",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      5,
+      17,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      6,
+      17,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-01f82c785127",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      387,
+      389,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      388,
+      389,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-f6db8e896f8f",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      20,
+      32,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      21,
+      32,
+      "CONSTITUTIONAL_BODY"
+    ]
+  }
+]

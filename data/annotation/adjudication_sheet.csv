@@ -1,0 +1,424 @@
+﻿task_id,language,document_type,source_file,pdf_page_number,start,end,span_text,label,annotator_1,annotator_2,agreement_status,adjudicated_start,adjudicated_end,adjudicated_span_text,adjudicated_label,adjudication_action,adjudicator,adjudication_date,notes
+annotation-0c8e1c40be03,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,114,135,152,"අනර්ථය
+කිරීමේ වරද",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-0e4e175a283c,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,72,144,200,"ක්‍රියාවක්‌ නීනි විරෝධිව හෙ
+නොසැලකිලිමත්ව කරන නැනැත්තකුට",OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate is an incomplete subject/condition, not a complete offense span. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 72. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-0e4e175a283c,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,72,222,269,දෙයාකාරයෙන්‌ එක්‌ ආකාරයක බන්ධනාගාරගත කිරීමකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-0e4e175a283c,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,72,273,281,ඳඩයකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-0e4e175a283c,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,72,285,307,එකී දඬුවම්‌ දෙකින්‌. ම,PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"OCR-fragmented punishment phrase overlaps another defective candidate. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 72. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-0e4e175a283c,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,72,285,315,එකී දඬුවම්‌ දෙකින්‌. ම දඬුවම්‌,PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"OCR-fragmented punishment phrase includes stray text and is not an exact entity. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 72. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-101c908fce72,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,125,573,595,අවුරුදු හත දක්චා කාලයක,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-101c908fce72,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,125,597,622,දෙයාකාරයෙන්‌ එක්‌ ය කාරයක,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-16c4353f538a,si,constitution,constitution-si.pdf,247,9,29,ෙȼ පනත āයාƮමක වන ǎනය,TEMPORAL_ENTITY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Overlaps the more complete relative-date phrase retained in this task. Candidate checked against text extracted from constitution-si.pdf, PDF page 247. Human validation required before gold-corpus use."
+annotation-16c4353f538a,si,constitution,constitution-si.pdf,247,23,48,වන ǎනයට ෙපරාƱව ම ɭ ǎනෙɏ Ǐ,TEMPORAL_ENTITY,no,yes,disputed,23,48,වන ǎනයට ෙපරාƱව ම ɭ ǎනෙɏ Ǐ,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 247; human validation required before gold-corpus use."
+annotation-16c4353f538a,si,constitution,constitution-si.pdf,247,49,62,පාəɣෙȼǦƱ සභාෙ,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Constitutional-body name is truncated at the proposed end boundary. Candidate checked against text extracted from constitution-si.pdf, PDF page 247. Human validation required before gold-corpus use."
+annotation-16c4353f538a,si,constitution,constitution-si.pdf,247,49,65,පාəɣෙȼǦƱ සභාෙɩ ǧ,CONSTITUTIONAL_BODY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Constitutional-body name includes the beginning of the following word. Candidate checked against text extracted from constitution-si.pdf, PDF page 247. Human validation required before gold-corpus use."
+annotation-16c4353f538a,si,constitution,constitution-si.pdf,247,203,223,ආƜƍĀම ව්‍යවස්ථා සභාව,CONSTITUTIONAL_BODY,yes,no,disputed,203,223,ආƜƍĀම ව්‍යවස්ථා සභාව,CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 247; human validation required before gold-corpus use."
+annotation-16c4353f538a,si,constitution,constitution-si.pdf,247,203,224,ආƜƍĀම ව්‍යවස්ථා සභාවට,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Overlapping variant includes an inflectional suffix; retain the base body name. Candidate checked against text extracted from constitution-si.pdf, PDF page 247. Human validation required before gold-corpus use."
+annotation-17207bb714f7,en,constitution,constitution.pdf,55,83,147,"the right of any person to
+make an application under Article 126",FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-17207bb714f7,en,constitution,constitution.pdf,55,156,176,"the
+Attorney-General",CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-17207bb714f7,en,constitution,constitution.pdf,55,231,244,the President,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-1eed8384fb48,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,94,62,80,"වරදකට
+නියමින දඬුවම",PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Heading about a penalty, not a specific punishment entity. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 94. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,129,154,"Punishment
+for
+defamation",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,156,207,"Printing or
+engraving
+matter known
+to be
+defamatory",OFFENSE,yes,no,disputed,156,207,"Printing or
+engraving
+matter known
+to be
+defamatory",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165; human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,209,275,"Sale of
+printed or
+engraved
+substance
+containing
+defamatory
+matter",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,619,634,defames another,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,658,718,"simple imprisonment for a term which may
+extend to two years",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,728,732,fine,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,742,746,both,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,904,964,"simple imprisonment for a term which may extend to
+two years",PENALTY,yes,no,disputed,904,964,"simple imprisonment for a term which may extend to
+two years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165; human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,974,978,fine,PENALTY,yes,no,disputed,974,978,fine,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165; human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,988,992,both,PENALTY,yes,no,disputed,988,992,both,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165; human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1036,1087,"printed or
+engraved substance containing defamatory",OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Offense description is truncated before its essential final noun. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165. Human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1157,1217,"simple imprisonment for a term which may
+extend to two years",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1227,1231,fine,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1241,1245,both,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1542,1607,"imprisonment of either
+description, which may extend to two years",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1615,1619,fine,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1627,1631,both,PENALTY,yes,no,disputed,1627,1631,both,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165; human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1627,1648,both such punishments,OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Refers to punishments, not an offense, and overlaps the retained penalty. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165. Human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1650,1672,"Criminal
+intimidation.",OFFENSE,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate heading variant; retain the clean full heading in this task. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165. Human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1687,1708,CRIMINAL INTIMIDATION,OFFENSE,no,yes,disputed,1687,1708,CRIMINAL INTIMIDATION,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 165; human validation required before gold-corpus use."
+annotation-233c4b273ec3,en,penal_code,Penal-Code I.pdf,165,1745,1781,threatens another with any injury to,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-35e01e7bb7bb,si,constitution,constitution-si.pdf,188,40,50,ආƜƍකාරවරයා,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-35e01e7bb7bb,si,constitution,constitution-si.pdf,188,59,68,පළාƮ සභාව,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-35e01e7bb7bb,si,constitution,constitution-si.pdf,188,264,274,ජනාǝපƯවරයා,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-3a7db66573a7,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,113,442,522,"වංක ලෙස හෝ වංචක ලෙස ලියා
+අන්සන්‌ කළහොන්‌ නැතහොන්‌ එබන්දකට පාර්ශවකාරයකු වේතොතනත්‌",OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Condition is incomplete and does not give a reliable exact offense boundary. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 113. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-3a7db66573a7,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,113,442,523,"වංක ලෙස හෝ වංචක ලෙස ලියා
+අන්සන්‌ කළහොන්‌ නැතහොන්‌ එබන්දකට පාර්ශවකාරයකු වේතොතනත්‌,",PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Same conduct as the adjacent candidate, incorrectly labeled PENALTY. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 113. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-3a7db66573a7,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,113,554,602,"දෙයාකාරයෙන්‌ එක්‌ ආකාරයක
+බන්ධනාගාර ගන කිරීමකින්‌",PENALTY,no,yes,disputed,554,602,"දෙයාකාරයෙන්‌ එක්‌ ආකාරයක
+බන්ධනාගාර ගන කිරීමකින්‌",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 113; human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-3a7db66573a7,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,113,606,614,දඩයකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-3a7db66573a7,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,113,618,638,එකී දඬුවම්‌ දෙකකින්ම,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,84,104,"wrongful
+confinement",OFFENSE,no,yes,disputed,84,104,"wrongful
+confinement",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,151,171,"Wrongful
+confinement",OFFENSE,no,yes,disputed,151,171,"Wrongful
+confinement",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,285,305,wrongfully restrains,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,424,445,wrongfully to confine,OFFENSE,yes,no,disputed,424,445,wrongfully to confine,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,460,488,"Illustrations
+(a) A causes Z",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,628,647,"wrongfully
+confines",OFFENSE,yes,no,disputed,628,647,"wrongfully
+confines",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,790,811,wrongfully confines Z,OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Illustration adds the subject Z; retain the compact act phrase elsewhere. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107. Human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,826,846,wrongfully restrains,OFFENSE,yes,no,disputed,826,846,wrongfully restrains,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,881,941,"simple imprisonment for a term
+which may extend to one month",PENALTY,yes,no,disputed,881,941,"simple imprisonment for a term
+which may extend to one month",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1071,1145,"imprisonment of either description
+for a term which may extend to one year",PENALTY,yes,no,disputed,1071,1145,"imprisonment of either description
+for a term which may extend to one year",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1155,1200,"fine
+which may extend to one thousand rupees,",PENALTY,yes,no,disputed,1155,1200,"fine
+which may extend to one thousand rupees,",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1201,1203,or,PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Conjunction alone is not a penalty entity. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107. Human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1209,1214,both.,PENALTY,yes,no,disputed,1209,1214,both.,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1228,1247,wrongfully confines,OFFENSE,yes,no,disputed,1228,1247,wrongfully confines,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1305,1382,"imprison-
+ment of either description for a term which may extend
+to two years",PENALTY,yes,no,disputed,1305,1382,"imprison-
+ment of either description for a term which may extend
+to two years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1406,1410,both,PENALTY,yes,no,disputed,1406,1410,both,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-3c78b833850c,en,penal_code,Penal-Code I.pdf,107,1425,1476,"wrongfully confines any person for
+ten days or more",OFFENSE,yes,no,disputed,1425,1476,"wrongfully confines any person for
+ten days or more",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 107; human validation required before gold-corpus use."
+annotation-427ec0bffa4d,en,constitution,constitution.pdf,175,4,43,on his attaining the age of sixty years,TEMPORAL_ENTITY,yes,no,disputed,4,43,on his attaining the age of sixty years,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 175; human validation required before gold-corpus use."
+annotation-427ec0bffa4d,en,constitution,constitution.pdf,175,4,44,on his attaining the age of sixty years;,TEMPORAL_ENTITY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate time expression with trailing punctuation. Candidate checked against text extracted from constitution.pdf, PDF page 175. Human validation required before gold-corpus use."
+annotation-4405f2bd3839,en,constitution,constitution.pdf,218,38,52,"the
+Commission",CONSTITUTIONAL_BODY,yes,no,disputed,38,52,"the
+Commission",CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 218; human validation required before gold-corpus use."
+annotation-4405f2bd3839,en,constitution,constitution.pdf,218,56,69,the President,CONSTITUTIONAL_BODY,yes,no,disputed,56,69,the President,CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 218; human validation required before gold-corpus use."
+annotation-4405f2bd3839,en,constitution,constitution.pdf,218,60,69,President,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate body name; retain the complete phrase with its article. Candidate checked against text extracted from constitution.pdf, PDF page 218. Human validation required before gold-corpus use."
+annotation-4405f2bd3839,en,constitution,constitution.pdf,218,95,121,"the
+Constitutional
+Council",CONSTITUTIONAL_BODY,yes,no,disputed,95,121,"the
+Constitutional
+Council",CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 218; human validation required before gold-corpus use."
+annotation-4405f2bd3839,en,constitution,constitution.pdf,218,99,121,"Constitutional
+Council",CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate body name; retain the complete phrase with its article. Candidate checked against text extracted from constitution.pdf, PDF page 218. Human validation required before gold-corpus use."
+annotation-46d42210af55,en,constitution,constitution.pdf,54,8,21,The President,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-5858a89d2a12,en,constitution,constitution.pdf,90,7,17,Parliament,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-5858a89d2a12,en,constitution,constitution.pdf,90,20,47,after having been dissolved,TEMPORAL_ENTITY,yes,yes,agreed,,,,,,,,
+annotation-5858a89d2a12,en,constitution,constitution.pdf,90,104,158,"the
+Members mentioned in paragraph (2) of this Article",CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-5858a89d2a12,en,constitution,constitution.pdf,90,239,279,while that Parliament is kept in session,TEMPORAL_ENTITY,no,yes,disputed,239,279,while that Parliament is kept in session,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 90; human validation required before gold-corpus use."
+annotation-5858a89d2a12,en,constitution,constitution.pdf,90,245,280,that Parliament is kept in session.,TEMPORAL_ENTITY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate temporal phrase starts late and includes trailing punctuation. Candidate checked against text extracted from constitution.pdf, PDF page 90. Human validation required before gold-corpus use."
+annotation-58d146597fdd,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,28,7,17,අනුබල දිමේ,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-58d146597fdd,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,28,184,228,දෙයාකාරයෙන්‌ එක්‌ ආකාරයක බන්ධනාගාරගන කිරීමකට,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-58d146597fdd,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,28,231,237,දූඩයකට,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,5,64,"රජතුමාගේ නාවික හමුදාවෙහි හෝ යුද්ධ හමුදාවෙහි හෙං
+ගගන හමුදාවෙ",CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,118,129,කැරලි ගැසීම,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,147,164,අනුබල දෙනු ලැබීමෙ,OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Truncated Sinhala description does not give a reliable offense boundary. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 34. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,177,187,අනුබල දීමේ,CONSTITUTIONAL_BODY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Phrase refers to abetment, not a constitutional institution. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 34. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,250,262,මරණිය දඬුවමෙ,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,295,342,දෙයාකාරයෙන්‌ එක්‌ ආකාරයක බන්ධනාගාරගන කිරීමකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-5ad68225927e,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,34,366,390,දඩයකට ද යටන්‌ විය යුතු ය,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-5ef8540c2eb5,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,24,65,92,මිනීමැරීමට “බී” ට අනුබල දීම,OFFENSE,yes,no,disputed,65,92,මිනීමැරීමට “බී” ට අනුබල දීම,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 24; human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-6131d750cbf3,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,56,135,182,"නොරතුරක්‌ එකී වරද සම්බන්ධයෙන්‌
+සපයනු ලැබුවහොන්‌",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-6131d750cbf3,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,56,207,254,"දෙයාකාරයෙන්‌ එක්‌
+ආකාරයක බන්ධනාගාරගන කිරීමකින්‌",PENALTY,yes,no,disputed,207,254,"දෙයාකාරයෙන්‌ එක්‌
+ආකාරයක බන්ධනාගාරගන කිරීමකින්‌",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 56; human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-6131d750cbf3,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,56,258,266,දඩයකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-6131d750cbf3,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,56,270,291,"එකී දඬුවම්‌
+දෙකින්‌ ම",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-64287627ee5f,en,penal_code,Penal Code.pdf,79,35,86,"Criminal
+intimidation by an
+anonymous
+communication",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-64287627ee5f,en,penal_code,Penal Code.pdf,79,124,176,"criminal intimidation by an anonymous,
+communication",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-64287627ee5f,en,penal_code,Penal Code.pdf,79,299,374,"imprisonment of either description for a
+term which may extend to two years",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-64287627ee5f,en,penal_code,Penal Code.pdf,79,695,886,"in a state of intoxication, appears in any public place or in any place which
+it is a trespass in him to enter, and there conducts himself in such a manner as to cause
+annoyance to any person",OFFENSE,yes,no,disputed,695,886,"in a state of intoxication, appears in any public place or in any place which
+it is a trespass in him to enter, and there conducts himself in such a manner as to cause
+annoyance to any person",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 79; human validation required before gold-corpus use."
+annotation-64287627ee5f,en,penal_code,Penal Code.pdf,79,981,1024,fine which may extend to one hundred rupees,PENALTY,yes,no,disputed,981,1024,fine which may extend to one hundred rupees,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 79; human validation required before gold-corpus use."
+annotation-64287627ee5f,en,penal_code,Penal Code.pdf,79,1034,1038,both,PENALTY,yes,no,disputed,1034,1038,both,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 79; human validation required before gold-corpus use."
+annotation-67918dc9dd23,en,penal_code,Penal Code.pdf,7,79,91,imprisonment,PENALTY,yes,no,disputed,79,91,imprisonment,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 7; human validation required before gold-corpus use."
+annotation-67918dc9dd23,en,penal_code,Penal Code.pdf,7,282,294,imprisonment,PENALTY,no,yes,disputed,282,294,imprisonment,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 7; human validation required before gold-corpus use."
+annotation-67918dc9dd23,en,penal_code,Penal Code.pdf,7,524,558,"Sentence of
+forfeiture of
+property",PENALTY,yes,no,disputed,524,558,"Sentence of
+forfeiture of
+property",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 7; human validation required before gold-corpus use."
+annotation-67918dc9dd23,en,penal_code,Penal Code.pdf,7,649,679,forfeiture of all his property,PENALTY,yes,no,disputed,649,679,forfeiture of all his property,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 7; human validation required before gold-corpus use."
+annotation-67918dc9dd23,en,penal_code,Penal Code.pdf,7,961,992,waging war against the Republic,OFFENSE,yes,no,disputed,961,992,waging war against the Republic,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 7; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,14,181,"Whoever kidnaps or abducts any woman with
+intent that she may be compelled, or knowing it to be
+likely that she will be compelled, to marry any person
+against her will",OFFENSE,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate offense description contains the introductory word Whoever. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114. Human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,22,181,"kidnaps or abducts any woman with
+intent that she may be compelled, or knowing it to be
+likely that she will be compelled, to marry any person
+against her will",OFFENSE,no,yes,disputed,22,181,"kidnaps or abducts any woman with
+intent that she may be compelled, or knowing it to be
+likely that she will be compelled, to marry any person
+against her will",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,363,364,i,PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Single letter is an OCR/boundary artifact, not a penalty. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114. Human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,363,438,"imprisonment of
+either description for a term which may extend to
+ten years",PENALTY,no,yes,disputed,363,438,"imprisonment of
+either description for a term which may extend to
+ten years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,364,438,"mprisonment of
+either description for a term which may extend to
+ten years",PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate punishment starts after its first letter. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114. Human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,458,472,liable to fine,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,487,559,"kidnaps or abducts any person in
+order that such person may be subjected",OFFENSE,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Offense description stops before the act is fully specified. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114. Human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,644,657,grievous hurt,OFFENSE,yes,no,disputed,644,657,grievous hurt,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,814,889,"imprisonment of either description for
+a term which may extend to ten years",PENALTY,yes,no,disputed,814,889,"imprisonment of either description for
+a term which may extend to ten years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,909,923,liable to fine,PENALTY,yes,no,disputed,909,923,liable to fine,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,939,1059,"knowing that any person has been
+kidnapped or has been abducted, wrongfully conceals
+or keeps such person in confinement",OFFENSE,yes,no,disputed,939,1059,"knowing that any person has been
+kidnapped or has been abducted, wrongfully conceals
+or keeps such person in confinement",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,1107,1128,kidnapped or abducted,OFFENSE,yes,no,disputed,1107,1128,kidnapped or abducted,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,1292,1412,"kidnaps or abducts any child under
+the age of ten years, with the intention of taking dis-
+honestly any movable property",OFFENSE,yes,no,disputed,1292,1412,"kidnaps or abducts any child under
+the age of ten years, with the intention of taking dis-
+honestly any movable property",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,1581,1635,"Kidnapping
+or abducting
+a woman to
+compel her
+marriage",OFFENSE,yes,no,disputed,1581,1635,"Kidnapping
+or abducting
+a woman to
+compel her
+marriage",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114; human validation required before gold-corpus use."
+annotation-6ad47586de9a,en,penal_code,Penal-Code I.pdf,114,1641,1690,"Kidnapping
+or abducting
+in order to
+s
+u
+b
+j
+e
+c
+t",OFFENSE,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"OCR corruption splits an essential word into individual letters. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 114. Human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,429,456,the offence of trafficking.,PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Phrase names an offense, not a penalty. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180. Human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,433,456,offence of trafficking.,OFFENSE,no,yes,disputed,433,456,offence of trafficking.,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180; human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,553,653,"imprisonment of either description for a
+term not less than two years and not exceeding
+twenty years",PENALTY,yes,no,disputed,553,653,"imprisonment of either description for a
+term not less than two years and not exceeding
+twenty years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180; human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,684,688,fine,PENALTY,yes,no,disputed,684,688,fine,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180; human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,765,867,"imprisonment of either description for a term
+not less than three years and not exceeding
+twenty years",PENALTY,yes,no,disputed,765,867,"imprisonment of either description for a term
+not less than three years and not exceeding
+twenty years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180; human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,898,902,fine,PENALTY,yes,no,disputed,898,902,fine,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180; human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,980,1006,forced or compulsory labou,OFFENSE,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"The last word is truncated; retain the complete alternative. Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180. Human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,980,1007,forced or compulsory labour,OFFENSE,yes,no,disputed,980,1007,forced or compulsory labour,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal-Code I.pdf, PDF page 180; human validation required before gold-corpus use."
+annotation-75b516a4a32f,en,penal_code,Penal-Code I.pdf,180,1051,1058,slavery,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-7e0780e727ca,en,constitution,constitution.pdf,30,0,35,culture and to use his own language,FUNDAMENTAL_RIGHT,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Fragment omits the start of the constitutional right. Candidate checked against text extracted from constitution.pdf, PDF page 30. Human validation required before gold-corpus use."
+annotation-7e0780e727ca,en,constitution,constitution.pdf,30,37,54,"Freedom of
+speech",FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-7e0780e727ca,en,constitution,constitution.pdf,30,56,64,assembly,FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-7e0780e727ca,en,constitution,constitution.pdf,30,66,77,association,FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-7e0780e727ca,en,constitution,constitution.pdf,30,79,89,occupation,FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-7e0780e727ca,en,constitution,constitution.pdf,30,91,99,movement,FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,45,61,පළ කරǩ ලබන ǎනෙයǦ,TEMPORAL_ENTITY,yes,yes,agreed,,,,,,,,
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,62,74,මාස Ʊනú ඇƱළත,TEMPORAL_ENTITY,no,yes,disputed,62,74,මාස Ʊනú ඇƱළත,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 132; human validation required before gold-corpus use."
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,62,80,මාස Ʊනú ඇƱළත අǩමතය,TEMPORAL_ENTITY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Temporal phrase extends into the following approval clause. Candidate checked against text extracted from constitution-si.pdf, PDF page 132. Human validation required before gold-corpus use."
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,86,95,පාəɣෙȼǦƱව,CONSTITUTIONAL_BODY,yes,no,disputed,86,95,පාəɣෙȼǦƱව,CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 132; human validation required before gold-corpus use."
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,86,96,පාəɣෙȼǦƱවට,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate constitutional body with grammatical suffix. Candidate checked against text extracted from constitution-si.pdf, PDF page 132. Human validation required before gold-corpus use."
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,195,208,අනǩමතෙɏ ǎන ʆට,TEMPORAL_ENTITY,no,yes,disputed,195,208,අනǩමතෙɏ ǎන ʆට,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 132; human validation required before gold-corpus use."
+annotation-7e8155d66d63,si,constitution,constitution-si.pdf,132,196,208,නǩමතෙɏ ǎන ʆට,TEMPORAL_ENTITY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Starts inside the first word; retain the complete temporal expression. Candidate checked against text extracted from constitution-si.pdf, PDF page 132. Human validation required before gold-corpus use."
+annotation-836bed01a1aa,si,constitution,constitution-si.pdf,147,148,158,කʣȽෂǦ සභාව,CONSTITUTIONAL_BODY,yes,no,disputed,148,158,කʣȽෂǦ සභාව,CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 147; human validation required before gold-corpus use."
+annotation-836bed01a1aa,si,constitution,constitution-si.pdf,147,228,251,ෙකʣȽෂǦ සභාෙɩ සාමාŏකයකුට,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Refers to a member of the Commission, not solely the body. Candidate checked against text extracted from constitution-si.pdf, PDF page 147. Human validation required before gold-corpus use."
+annotation-836bed01a1aa,si,constitution,constitution-si.pdf,147,319,347,ɞȘයɢ එú ලúෂයú ෙනʣඉúමවන දඩයකට,PENALTY,no,yes,disputed,319,347,ɞȘයɢ එú ලúෂයú ෙනʣඉúමවන දඩයකට,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 147; human validation required before gold-corpus use."
+annotation-836bed01a1aa,si,constitution,constitution-si.pdf,147,349,401,"හʤ අɬɞǐ Ʊනú
+ෙනʣඉúමවන කාලයú සඳහා බǦධනාගාරගත කරǩ ලැȫමට",PENALTY,yes,no,disputed,349,401,"හʤ අɬɞǐ Ʊනú
+ෙනʣඉúමවන කාලයú සඳහා බǦධනාගාරගත කරǩ ලැȫමට",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 147; human validation required before gold-corpus use."
+annotation-836bed01a1aa,si,constitution,constitution-si.pdf,147,361,401,ෙනʣඉúමවන කාලයú සඳහා බǦධනාගාරගත කරǩ ලැȫමට,PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Penalty boundary omits the opening duration words. Candidate checked against text extracted from constitution-si.pdf, PDF page 147. Human validation required before gold-corpus use."
+annotation-836bed01a1aa,si,constitution,constitution-si.pdf,147,406,444,"ඒ
+දඩය හා බǦධනාගාරගත ûɝම යන දƍවȼ ෙදකට ම",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-8aacf72f7765,si,constitution,constitution-si.pdf,231,53,79,ආƜƍĀම ව්‍යවස්ථාව āයාƮමක ɫම,TEMPORAL_ENTITY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Names a commencement event but gives no extractable time expression here. Candidate checked against text extracted from constitution-si.pdf, PDF page 231. Human validation required before gold-corpus use."
+annotation-8aacf72f7765,si,constitution,constitution-si.pdf,231,112,130,ඉකුƮව ęය කාලය Ʊළ ɭ,TEMPORAL_ENTITY,yes,no,disputed,112,130,ඉකුƮව ęය කාලය Ʊළ ɭ,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution-si.pdf, PDF page 231; human validation required before gold-corpus use."
+annotation-8aacf72f7765,si,constitution,constitution-si.pdf,231,331,344,යȼûʆ අɐƯවාʆකම,PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Text names a right, not a penalty. Candidate checked against text extracted from constitution-si.pdf, PDF page 231. Human validation required before gold-corpus use."
+annotation-9526d7eacb0a,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,70,53,85,මුද්දරයක්‌ කූට ලෙස නැනීමේ කාර්යය,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-9526d7eacb0a,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,70,402,449,දෙයාකාරයෙන්‌ එක්‌ ආකාරයක බන්ධනාගාරගන කිරීමකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-9526d7eacb0a,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,70,450,457,දඬුවම්‌,PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Generic reference to punishments, without a specific sanction. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 70. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-9526d7eacb0a,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,70,469,472,ඔහු,PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Pronoun is not a penalty entity. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 70. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-9526d7eacb0a,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,70,473,478,දඩයකට,PENALTY,no,yes,disputed,473,478,දඩයකට,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 70; human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-9526d7eacb0a,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,70,473,498,දඩයකට ද යටන්‌ විය යුනු ය.,PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Penalty phrase extends into non-entity wording; retain its compact alternative. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 70. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-a66feb21d470,en,constitution,constitution.pdf,32,34,99,"the fundamental
+right declared and recognized by Article 14(1)(a)",FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-a66feb21d470,en,constitution,constitution.pdf,32,258,275,contempt of court,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-a66feb21d470,en,constitution,constitution.pdf,32,277,287,defamation,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-a66feb21d470,en,constitution,constitution.pdf,32,291,315,incitement to an offence,OFFENSE,no,yes,disputed,291,315,incitement to an offence,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 32; human validation required before gold-corpus use."
+annotation-a66feb21d470,en,constitution,constitution.pdf,32,291,316,incitement to an offence.,OFFENSE,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate offense expression with trailing punctuation. Candidate checked against text extracted from constitution.pdf, PDF page 32. Human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,0,77,"House-trespass in
+order to the
+commission of an
+offence
+punishable with
+death",OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,202,262,"rigorous imprisonment for a term not
+exceeding twenty years,",PENALTY,yes,no,disputed,202,262,"rigorous imprisonment for a term not
+exceeding twenty years,",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,211,261,"imprisonment for a term not
+exceeding twenty years",PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Overlaps the fuller punishment phrase and omits rigorous. Candidate checked against text extracted from Penal Code.pdf, PDF page 72. Human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,297,311,House-trespass,OFFENSE,yes,yes,agreed,,,,,,,,
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,516,533,ten years or more,TEMPORAL_ENTITY,yes,no,disputed,516,533,ten years or more,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,557,626,"imprisonment of
+either description for a term not exceeding ten years",PENALTY,yes,no,disputed,557,626,"imprisonment of
+either description for a term not exceeding ten years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,646,660,liable to fine,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,662,770,"House-trespass in
+order to the
+commission of an
+offence
+punishable with
+imprisonment for
+less than ten
+years",OFFENSE,yes,no,disputed,662,770,"House-trespass in
+order to the
+commission of an
+offence
+punishable with
+imprisonment for
+less than ten
+years",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,793,902,"house-trespass in order to the committing of any offence
+punishable with imprisonment for less than ten years",OFFENSE,yes,no,disputed,793,902,"house-trespass in order to the committing of any offence
+punishable with imprisonment for less than ten years",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,926,1001,"imprisonment
+of either description for a term which may extend to two years",PENALTY,yes,no,disputed,926,1001,"imprisonment
+of either description for a term which may extend to two years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1021,1035,"liable to
+fine",PENALTY,yes,no,disputed,1021,1035,"liable to
+fine",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1085,1090,theft,OFFENSE,yes,no,disputed,1085,1090,theft,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1104,1151,"the imprisonment may
+be extended to seven years",PENALTY,yes,no,disputed,1104,1151,"the imprisonment may
+be extended to seven years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1295,1299,hurt,OFFENSE,yes,no,disputed,1295,1299,hurt,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1321,1328,assault,OFFENSE,yes,no,disputed,1321,1328,assault,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1351,1373,wrongfully restraining,OFFENSE,yes,no,disputed,1351,1373,wrongfully restraining,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1491,1569,"imprisonment of either description for a term which may extend to seven years,",PENALTY,yes,no,disputed,1491,1569,"imprisonment of either description for a term which may extend to seven years,",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1619,1642,"lurking house-
+trespass",OFFENSE,yes,no,disputed,1619,1642,"lurking house-
+trespass",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-a79c5ceeef0d,en,penal_code,Penal Code.pdf,72,1711,1725,house-breaking,OFFENSE,yes,no,disputed,1711,1725,house-breaking,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 72; human validation required before gold-corpus use."
+annotation-aa9cf5a04c8b,en,constitution,constitution.pdf,83,16,30,the Commission,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-aa9cf5a04c8b,en,constitution,constitution.pdf,83,170,202,the expiry of his term of office,TEMPORAL_ENTITY,yes,yes,agreed,,,,,,,,
+annotation-aa9cf5a04c8b,en,constitution,constitution.pdf,83,293,312,more than two terms,TEMPORAL_ENTITY,no,yes,disputed,293,312,more than two terms,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 83; human validation required before gold-corpus use."
+annotation-aa9cf5a04c8b,en,constitution,constitution.pdf,83,293,313,more than two terms.,TEMPORAL_ENTITY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate temporal phrase with trailing punctuation. Candidate checked against text extracted from constitution.pdf, PDF page 83. Human validation required before gold-corpus use."
+annotation-b021d57d3f65,si,constitution,constitution-si.pdf,130,57,67,කʣȽෂǦ සභාව,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-b28a878b91f7,si,constitution,constitution-si.pdf,79,11,32,"ආƜƍĀම
+ව්‍යවස්ථා
+සභාෙɩ",CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-b28a878b91f7,si,constitution,constitution-si.pdf,79,146,170,රාජ්‍ය ෙසේවා ෙකʣȽෂǦ සභාව,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-b28a878b91f7,si,constitution,constitution-si.pdf,79,256,268,පහෙළʣවකට වැƋ,TEMPORAL_ENTITY,yes,yes,agreed,,,,,,,,
+annotation-b28a878b91f7,si,constitution,constitution-si.pdf,79,331,341,ජනාǝපƯවරයා,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-b28a878b91f7,si,constitution,constitution-si.pdf,79,362,371,සභාපƯවරයා,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-bd58ca54ded3,en,penal_code,Penal-Code I.pdf,17,151,158,a Judge,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-c0a7a38cee1f,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,74,300,347,"දෙයාකාරයෙන්‌ එක්‌ ආකාරයක බන්ධනාගාරගන
+කිරිමකින්‌",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-c0a7a38cee1f,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,74,352,380,රුපියල්‌ සියය දක්වා දඩයකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-c0a7a38cee1f,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,74,384,403,එකී දඬුවම්‌ දෙකින්‌,PENALTY,yes,no,disputed,384,403,එකී දඬුවම්‌ දෙකින්‌,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 74; human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-c0a7a38cee1f,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,74,384,405,"එකී දඬුවම්‌ දෙකින්‌
+ම",PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate penalty expression includes an extra OCR suffix. Candidate assessed from the proposed span; scanned source at දණ්ඩ නීති සංග්_රහය.pdf, PDF page 74. Human validation required before gold-corpus use. Source PDF is scanned; verify visually against the page."
+annotation-c3a33c6b04b8,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,52,270,317,"දෙයාකාරයෙන්‌
+එක්‌ ආකාරයක බන්ධනාගාරගන කිරීමකින්‌",PENALTY,yes,yes,agreed,,,,,,,,
+annotation-c3a33c6b04b8,si,penal_code,දණ්ඩ නීති සංග්_රහය.pdf,52,321,329,දඩයකින්‌,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-c97fa4d39d23,en,constitution,constitution.pdf,229,8,51,the right to sit for any public examination,FUNDAMENTAL_RIGHT,yes,yes,agreed,,,,,,,,
+annotation-d9ad4e42aa79,en,constitution,constitution.pdf,160,4,21,The Supreme Court,CONSTITUTIONAL_BODY,yes,no,disputed,4,21,The Supreme Court,CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 160; human validation required before gold-corpus use."
+annotation-d9ad4e42aa79,en,constitution,constitution.pdf,160,8,21,Supreme Court,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate court name; retain the complete phrase with its article. Candidate checked against text extracted from constitution.pdf, PDF page 160. Human validation required before gold-corpus use."
+annotation-d9ad4e42aa79,en,constitution,constitution.pdf,160,152,215,"any petition or
+reference referred to in paragraphs (2) and (3)",FUNDAMENTAL_RIGHT,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Refers to petitions or references rather than naming a fundamental right. Candidate checked against text extracted from constitution.pdf, PDF page 160. Human validation required before gold-corpus use."
+annotation-d9ad4e42aa79,en,constitution,constitution.pdf,160,260,279,the Court of Appeal,CONSTITUTIONAL_BODY,yes,no,disputed,260,279,the Court of Appeal,CONSTITUTIONAL_BODY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from constitution.pdf, PDF page 160; human validation required before gold-corpus use."
+annotation-d9ad4e42aa79,en,constitution,constitution.pdf,160,264,279,Court of Appeal,CONSTITUTIONAL_BODY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate court name; retain the complete phrase with its article. Candidate checked against text extracted from constitution.pdf, PDF page 160. Human validation required before gold-corpus use."
+annotation-d9ad4e42aa79,en,constitution,constitution.pdf,160,280,363,"if in
+its opinion there is no infringement of a fundamental right
+or language right",FUNDAMENTAL_RIGHT,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Conditional statement about infringement, not the name of a right. Candidate checked against text extracted from constitution.pdf, PDF page 160. Human validation required before gold-corpus use."
+annotation-e63a2c1f1264,en,constitution,constitution.pdf,77,29,39,Parliament,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-eecd966313fc,en,constitution,constitution.pdf,82,21,55,"immediately before his
+appointment",TEMPORAL_ENTITY,yes,yes,agreed,,,,,,,,
+annotation-eecd966313fc,en,constitution,constitution.pdf,82,71,85,the Commission,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-eecd966313fc,en,constitution,constitution.pdf,82,165,200,upon such appointment taking effect,TEMPORAL_ENTITY,yes,yes,agreed,,,,,,,,
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,102,125,"sexual
+abuse of a child",OFFENSE,yes,no,disputed,102,125,"sexual
+abuse of a child",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,371,394,sexual abuse of a child,OFFENSE,yes,no,disputed,371,394,sexual abuse of a child,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,573,620,offence relating to the sexual abuse of a child,OFFENSE,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Contains generic preamble; retain the exact offense phrase inside it. Candidate checked against text extracted from Penal Code.pdf, PDF page 43. Human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,597,620,sexual abuse of a child,OFFENSE,no,yes,disputed,597,620,sexual abuse of a child,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,967,1036,"imprisonment of
+either description for a term not exceeding two years",PENALTY,yes,no,disputed,967,1036,"imprisonment of
+either description for a term not exceeding two years",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,1043,1049,a fine,PENALTY,yes,no,disputed,1043,1049,a fine,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,1056,1087,"both
+such imprisonment and fine",PENALTY,yes,no,disputed,1056,1087,"both
+such imprisonment and fine",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,1139,1160,eighteen years of age,TEMPORAL_ENTITY,yes,no,disputed,1139,1160,eighteen years of age,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,1408,1424,abuse of a child,OFFENSE,no,yes,disputed,1408,1424,abuse of a child,OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-ef3766e1b177,en,penal_code,Penal Code.pdf,43,1432,1441,forthwith,TEMPORAL_ENTITY,yes,no,disputed,1432,1441,forthwith,TEMPORAL_ENTITY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 43; human validation required before gold-corpus use."
+annotation-f4d5ba1d9c96,si,constitution,constitution-si.pdf,71,40,44,සභාෙ,CONSTITUTIONAL_BODY,yes,yes,agreed,,,,,,,,
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,294,370,imprisonment of either description for a term which may extend to six months,PENALTY,yes,no,disputed,294,370,imprisonment of either description for a term which may extend to six months,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,294,371,"imprisonment of either description for a term which may extend to six months,",PENALTY,no,yes,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Duplicate penalty with trailing punctuation. Candidate checked against text extracted from Penal Code.pdf, PDF page 40. Human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,380,423,fine which may extend to one hundred rupees,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,433,437,both,PENALTY,yes,yes,agreed,,,,,,,,
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,439,464,"Sale of
+adulterated drugs",OFFENSE,yes,no,disputed,439,464,"Sale of
+adulterated drugs",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,879,955,"imprisonment of either description for
+a term which may extend to six months",PENALTY,yes,no,disputed,879,955,"imprisonment of either description for
+a term which may extend to six months",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,966,1008,"ine which may extend to one hundred
+rupees",PENALTY,yes,no,disputed,,,,,delete,OpenAI-assisted draft; human approval pending,2026-09-24,"Penalty starts inside the word fine; exact start is unavailable from the task text. Candidate checked against text extracted from Penal Code.pdf, PDF page 40. Human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,1018,1022,both,PENALTY,yes,no,disputed,1018,1022,both,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,1024,1076,"Sale of any drugs
+as a different drug
+or preparation",OFFENSE,yes,no,disputed,1024,1076,"Sale of any drugs
+as a different drug
+or preparation",OFFENSE,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,1291,1367,"imprisonment of either description for a term which may
+extend to six months",PENALTY,yes,no,disputed,1291,1367,"imprisonment of either description for a term which may
+extend to six months",PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,1377,1420,fine which may extend to one hundred rupees,PENALTY,yes,no,disputed,1377,1420,fine which may extend to one hundred rupees,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."
+annotation-f7c160cb8987,en,penal_code,Penal Code.pdf,40,1430,1434,both,PENALTY,yes,no,disputed,1430,1434,both,PENALTY,keep,OpenAI-assisted draft; human approval pending,2026-09-24,"Candidate checked against text extracted from Penal Code.pdf, PDF page 40; human validation required before gold-corpus use."

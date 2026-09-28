@@ -24,7 +24,7 @@ configs/*_local.yaml
 !data/extracted/records.jsonl
 
 !data/aligned/.gitkeep
-data/annotation/**/*
+
 !data/annotation/.gitkeep
 data/processed/**/*
 !data/processed/.gitkeep

@@ -1,0 +1,137 @@
+[
+  {
+    "task_id": "annotation-16c4353f538a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      203,
+      225,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      203,
+      224,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-6ad47586de9a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      362,
+      438,
+      "PENALTY"
+    ],
+    "after": [
+      363,
+      438,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-233c4b273ec3",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      1614,
+      1619,
+      "PENALTY"
+    ],
+    "after": [
+      1615,
+      1619,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-0c8e1c40be03",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      135,
+      153,
+      "OFFENSE"
+    ],
+    "after": [
+      135,
+      152,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-9526d7eacb0a",
+    "action": "remove_confirmed_span",
+    "span": [
+      469,
+      474,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-0e4e175a283c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      284,
+      307,
+      "PENALTY"
+    ],
+    "after": [
+      285,
+      307,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-7e8155d66d63",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      62,
+      75,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      62,
+      74,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-427ec0bffa4d",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      3,
+      44,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      4,
+      44,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-5858a89d2a12",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      103,
+      159,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      104,
+      158,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-5858a89d2a12",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      238,
+      279,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      239,
+      279,
+      "TEMPORAL_ENTITY"
+    ]
+  }
+]

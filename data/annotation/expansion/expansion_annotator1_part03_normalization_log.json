@@ -1,0 +1,366 @@
+[
+  {
+    "task_id": "annotation-51c8c91e62a0",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      721,
+      831,
+      "PENALTY"
+    ],
+    "after": [
+      722,
+      831,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-4d81064c617e",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      259,
+      289,
+      "OFFENSE"
+    ],
+    "after": [
+      259,
+      288,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-1b5c4cde5f2a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      132,
+      172,
+      "FUNDAMENTAL_RIGHT"
+    ],
+    "after": [
+      132,
+      171,
+      "FUNDAMENTAL_RIGHT"
+    ]
+  },
+  {
+    "task_id": "annotation-8bf78eb00605",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      502,
+      536,
+      "PENALTY"
+    ],
+    "after": [
+      502,
+      535,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-d4544639b937",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      3,
+      16,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      4,
+      16,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-57ed928574b0",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      3,
+      11,
+      "OFFENSE"
+    ],
+    "after": [
+      4,
+      11,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-57ed928574b0",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      73,
+      78,
+      "OFFENSE"
+    ],
+    "after": [
+      74,
+      78,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-57ed928574b0",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      97,
+      108,
+      "OFFENSE"
+    ],
+    "after": [
+      98,
+      108,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-57ed928574b0",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      254,
+      259,
+      "PENALTY"
+    ],
+    "after": [
+      255,
+      259,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-71060a8fc7c3",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      79,
+      90,
+      "PENALTY"
+    ],
+    "after": [
+      80,
+      90,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-381847680573",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      248,
+      258,
+      "OFFENSE"
+    ],
+    "after": [
+      249,
+      258,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-8a318691952a",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      217,
+      226,
+      "PENALTY"
+    ],
+    "after": [
+      217,
+      225,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-4add7266f15b",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      248,
+      257,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      248,
+      256,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-d2120d442492",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      278,
+      301,
+      "PENALTY"
+    ],
+    "after": [
+      279,
+      301,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-d8268a371b10",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      33,
+      59,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      33,
+      58,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-05fb41b40958",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      63,
+      150,
+      "PENALTY"
+    ],
+    "after": [
+      64,
+      150,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-9ce3b118e4ea",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      0,
+      127,
+      "OFFENSE"
+    ],
+    "after": [
+      0,
+      126,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-46fe872e3459",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      4,
+      384,
+      "OFFENSE"
+    ],
+    "after": [
+      5,
+      384,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-7bedfebbdc67",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      352,
+      374,
+      "PENALTY"
+    ],
+    "after": [
+      353,
+      374,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-d13fd6b35473",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      80,
+      86,
+      "OFFENSE"
+    ],
+    "after": [
+      81,
+      86,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-d13fd6b35473",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      565,
+      585,
+      "PENALTY"
+    ],
+    "after": [
+      566,
+      585,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-24b4a1504514",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      8,
+      21,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      9,
+      21,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-24b4a1504514",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      284,
+      297,
+      "OFFENSE"
+    ],
+    "after": [
+      284,
+      296,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-24b4a1504514",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      355,
+      409,
+      "OFFENSE"
+    ],
+    "after": [
+      356,
+      409,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-798a178c234d",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      649,
+      697,
+      "PENALTY"
+    ],
+    "after": [
+      650,
+      697,
+      "PENALTY"
+    ]
+  },
+  {
+    "task_id": "annotation-d2ceb6be294b",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      44,
+      89,
+      "PENALTY"
+    ],
+    "after": [
+      45,
+      89,
+      "PENALTY"
+    ]
+  }
+]

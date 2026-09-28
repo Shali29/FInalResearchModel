@@ -1,0 +1,13 @@
+{
+  "decision_file": "C:\\Users\\acer\\Downloads\\adjudication_sheet.csv",
+  "decision_file_sha256": "299dcc3e1ceef70dfa9da43bfaee861fa3071b51e709bc92b54fa76142dee23f",
+  "decision_rows": 230,
+  "actions": {
+    "keep": 97,
+    "delete": 50,
+    "modify": 0
+  },
+  "task_count": 50,
+  "verification_status": "pending_human_approval",
+  "output_file": "data\\annotation\\provisional_adjudicated_corpus.jsonl"
+}

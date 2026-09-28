@@ -1,0 +1,32 @@
+{
+  "random_seed": 2446,
+  "selection_method": "language/entity cue enrichment; cues are not labels",
+  "labels_generated": false,
+  "task_count": 420,
+  "shared_subset_count": 84,
+  "shared_subset_fraction": 0.2,
+  "unique_parent_count": 420,
+  "overlap_with_existing_task_ids": 0,
+  "group_counts": {
+    "en:constitutional_body": 44,
+    "en:fundamental_right": 45,
+    "en:offense": 44,
+    "en:penalty": 44,
+    "en:temporal": 43,
+    "si:constitutional_body": 44,
+    "si:fundamental_right": 25,
+    "si:offense": 44,
+    "si:penalty": 44,
+    "si:temporal": 43
+  },
+  "language_counts": {
+    "en": 220,
+    "si": 200
+  },
+  "document_type_counts": {
+    "amendment": 22,
+    "constitution": 178,
+    "penal_code": 220
+  },
+  "annotation_status": "blank_pending_human_annotation"
+}

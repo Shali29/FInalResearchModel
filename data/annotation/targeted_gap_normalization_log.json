@@ -1,0 +1,58 @@
+[
+  {
+    "task_id": "annotation-7df4318e26ba",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      461,
+      468,
+      "OFFENSE"
+    ],
+    "after": [
+      461,
+      467,
+      "OFFENSE"
+    ]
+  },
+  {
+    "task_id": "annotation-287e7c719124",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      9,
+      11,
+      "CONSTITUTIONAL_BODY"
+    ],
+    "after": [
+      10,
+      11,
+      "CONSTITUTIONAL_BODY"
+    ]
+  },
+  {
+    "task_id": "annotation-6f8ae1cf8fc1",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      201,
+      226,
+      "TEMPORAL_ENTITY"
+    ],
+    "after": [
+      202,
+      226,
+      "TEMPORAL_ENTITY"
+    ]
+  },
+  {
+    "task_id": "annotation-103b61fa880c",
+    "action": "trim_boundary_whitespace",
+    "before": [
+      20,
+      66,
+      "OFFENSE"
+    ],
+    "after": [
+      20,
+      65,
+      "OFFENSE"
+    ]
+  }
+]
